@@ -62,3 +62,8 @@ $\frac{\partial }{\partial X_{ij}} \mathbf{a}^T\mathbf{X}\mathbf{b} = a_jb_i$
 Then stacking those $\frac{\partial }{\partial X_{ij}}$ into full matrix you'll
 get the answer. See ([[https://math.stackexchange.com/a/2190586/852078][link]])
 
+* Useful link
+- Taylor series wiki ([[https://en.wikipedia.org/wiki/Taylor_series][link]])
+- Taylor series e176 ([[http://fourier.eng.hmc.edu/e176/lectures/NM/node45.html][link]])
+- Directional derivative wiki ([[https://en.wikipedia.org/wiki/Directional_derivative][link]])
+- 

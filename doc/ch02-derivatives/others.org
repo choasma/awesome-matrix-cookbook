@@ -1,0 +1,8 @@
+* TODO
+
+https://math.stackexchange.com/questions/2662141/matrix-derivative-of-transpose
+https://math.stackexchange.com/questions/2699811/computing-the-derivative-of-axxtbt-with-respect-to-x
+https://math.stackexchange.com/questions/3782074/find-frac-partial-operatornametraceax-1atx-partial-x?rq=1
+https://math.stackexchange.com/questions/1903902/derivative-of-rm-at-xt-x-xt-x-b-with-respect-to-rm-x
+https://math.stackexchange.com/questions/3099430/derivative-of-mathbfxxt-with-respect-to-mathbfx
+https://math.stackexchange.com/questions/2131708/understanding-notation-of-derivatives-of-a-matrix?rq=1

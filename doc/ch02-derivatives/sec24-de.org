@@ -1,0 +1,6 @@
+* Eq.(72) TODO
+https://math.stackexchange.com/questions/1456626/how-to-find-frac-partial-xtax-partial-a
+https://math.stackexchange.com/questions/1404399/why-does-frac-partial-atx-a-partial-x-aat
+* Others
+https://math.stackexchange.com/questions/1267201/matrix-calculus-and-matrix-derivatives
+https://math.stackexchange.com/questions/1130251/generic-rule-matrix-differentiation-hadamard-product-element-wise/1130691#1130691

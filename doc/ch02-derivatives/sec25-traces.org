@@ -1,0 +1,24 @@
+* eq.101 $\nabla_{\mathbf{X}} \text{tr}(\mathbf{A}\mathbf{X}\mathbf{B}) = \mathbf{A}^T\mathbf{B}^T$
+using trace and frobenious norm
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+f(\mathbf{X}) &= \text{tr}(\mathbf{A}\mathbf{X}\mathbf{B}) \\
+              &= \text{tr}(\mathbf{B}\mathbf{A}\mathbf{X}) \\
+              &= \left<(\mathbf{B}\mathbf{A})^T, \mathbf{X}\right>
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+Then 
+
+$df(\mathbf{X}) = \left<(\mathbf{B}\mathbf{A})^T, d\mathbf{X}\right> = \left<\mathbf{A}^T\mathbf{B}^T, d\mathbf{X}\right>$
+
+** reference
+- Matrix derivative of Tr(𝐀𝐗𝐁) ([[https://math.stackexchange.com/questions/2170842/matrix-derivative-of-mboxtr-mathbfaxb?rq=1][link]])
+
+* TODO 
+https://math.stackexchange.com/questions/2185981/prove-matrix-derivative-identity
+https://math.stackexchange.com/questions/2800228/derivative-of-mboxtr-left-leftaxa-right-frac12-right-with-respe
+https://math.stackexchange.com/questions/2586376/derivative-of-trace-of-hadamard-and-dot-product
