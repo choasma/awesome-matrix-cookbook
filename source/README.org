@@ -1,0 +1,2 @@
+* The source code of the book
+TODO: I think I'll write in pytorch

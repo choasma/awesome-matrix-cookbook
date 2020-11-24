@@ -1,21 +1,45 @@
 * Hera
 
-My study notes of Matrix Cook book ([[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixmciLhZvtAhU-63MBHT5ZDVcQFjABegQIBBAC&url=https%3A%2F%2Fwww.ics.uci.edu%2F~welling%2Fteaching%2FKernelsICS273B%2FMatrixCookBook.pdf&usg=AOvVaw1CtNS3lRl-5H1oZbFqKlJr][link]]). This repository aims at providing
-the proof of the derivatives in the book, having huristic understanding of
-matrix derivative.
+My study notes of Matrix Cook book ([[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixmciLhZvtAhU-63MBHT5ZDVcQFjABegQIBBAC&url=https%3A%2F%2Fwww.ics.uci.edu%2F~welling%2Fteaching%2FKernelsICS273B%2FMatrixCookBook.pdf&usg=AOvVaw1CtNS3lRl-5H1oZbFqKlJr][link]]). 
 
-This is still the early stage of working on this project. The motivation of this
-is I'd like to put all references from the internet in one place, as well as
-practice my math skill. Feel free to correct the answer that I have provided.
+This repository aims at providing the proof of the derivatives in the book, 
+having huristic understanding of matrix derivative.
+
+This is still in the early stage of development. The motivation of this is I'd
+like to put all references from the internet in one place, as well as refresh
+my math skill for my PhD study. Feel free to correct the answer that I have provided.
+
+Your opinions are welcome! I'm a little learner in this world
 
 * Usage
 
 I have a hard time to work on math rendering in github. But instead I would
 render all org files into htmls. So you could clone the project and open up the
-html with the browser. 
+html with the browser. Your entry point is =./doc/preface.html=.
+
+Or if you use Emacs editor ([[https://www.gnu.org/software/emacs/download.html][link]]) together with proper installations (e.g.,
+org-mode, mathjax, ...), you can see the better visualization in org file.
 
 * Structure
 
 Here is the repository structure
 
-TODO
+#+begin_src python
+root ┬ doc # the pages with derivation
+     │  ├ chxx-xxx # each chapter
+     │  └ ...
+     └ source # some python scripts here 
+#+end_src
+
+* Plan
+- [ ] ch01-basic
+- [ ] ch02-derivatives
+- [ ] ch03-inverse
+- [ ] ch04-compmat
+- [ ] ch05-sol-and-decomp
+- [ ] ch06-stat-and-prob
+- [ ] ch07-mul-dist
+- [ ] ch08-gaussian
+- [ ] ch09-special
+- [ ] ch10-func
+- [ ] prepare experimental code

@@ -1,0 +1,15 @@
+* Ch10 Function and operators
+TODO
+
+* Index
+- ch00 preface ([[file:~/kma-workspace/project/hera/doc/preface.org][link]])
+- ch01 Basic
+- ch02 Derivatives
+- ch03 Inverses
+- ch04 Complex Matrices
+- ch05 Solutions and Decomposition
+- ch06 Statistics and Probability
+- ch07 Multivariate Distribution
+- ch08 Gaussians
+- ch09 Special Matrices
+- ch10 Function and operators ([[file:ch10-func/README.org][link]])

@@ -1,3 +1,16 @@
+* Portal
+- ch00 preface ([[file:preface.org][link]])
+- ch01 Basic ([[file:ch01-basic/README.org][link]])
+- ch02 Derivatives ([[file:ch02-derivatives/README.org][link]])
+- ch03 Inverses ([[file:ch03-inverse/README.org][link]])
+- ch04 Complex Matrices ([[file:ch04-compmat/README.org][link]])
+- ch05 Solutions and Decomposition ([[file:ch05-sol-and-decomp/README.org][link]])
+- ch06 Statistics and Probability ([[file:ch06-stat-and-prob/README.org][link]])
+- ch07 Multivariate Distribution ([[file:ch07-mul-dist/README.org][link]])
+- ch08 Gaussians ([[file:ch08-gaussian/README.org][link]])
+- ch09 Special Matrices ([[file:ch09-special/README.org][link]])
+- ch10 Function and operators ([[file:ch10-func/README.org][link]])
+
 * Basic essentials
 This section illustrates some essentials to make the proof of equations. The following hits are usually being adopted
 to solve the derivative problems (just in my opinion).
@@ -65,5 +78,4 @@ get the answer. See ([[https://math.stackexchange.com/a/2190586/852078][link]])
 * Useful link
 - Taylor series wiki ([[https://en.wikipedia.org/wiki/Taylor_series][link]])
 - Taylor series e176 ([[http://fourier.eng.hmc.edu/e176/lectures/NM/node45.html][link]])
-- Directional derivative wiki ([[https://en.wikipedia.org/wiki/Directional_derivative][link]])
-- 
+- Directional derivative wiki ([[https://en.wikipedia.org/wiki/Directional_derivative][link]]) 
