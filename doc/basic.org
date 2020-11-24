@@ -18,12 +18,14 @@ $f(\mathbf{x} + d\mathbf{x}) = f(\mathbf{x})  + \mathbf{g}^T d\mathbf{x} +
 
 ** Example:  $\nabla_\mathbf{X} \mathbf{a}^T \mathbf{X} \mathbf{b} = \mathbf{a}\mathbf{b}^T$
 
-```math
+#+BEGIN_LaTeX latex
 \begin{equation}
 \begin{split}
 f(\mathbf{X} + \mathbf{H}) &= \mathbf{a}^T (\mathbf{X} + \mathbf{H}) \mathbf{b} \\
                            &= \mathbf{a}^T \mathbf{X} \mathbf{b} + \mathbf{a}^T \mathbf{H} \mathbf{b}\\
-```
+\end{split}
+\end{equation}
+#+END_LaTeX
 
 Then 
 
