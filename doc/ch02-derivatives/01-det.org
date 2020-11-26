@@ -1,0 +1,56 @@
+* Derivative of determinant
+
+* Cheatsheet
+** properties
+just for handy
+- $\det(\mathbf{I}_n) = 1$
+- $\det(\mathbf{A}^{-1}) = \frac{1}{\det(\mathbf{A})}$
+- $\det(\mathbf{A}\mathbf{B}) = \det(\mathbf{A})\det(\mathbf{B})$
+- $\det(\mathbf{A}+\mathbf{B}) \geq \det(\mathbf{A})+\det(\mathbf{B})$
+- $\det(\mathbf{A}) = \prod_i a_{ii}$ if $A$
+- $\det(c\mathbf{A}) = c^n\det(\mathbf{A})$ where $\mathbf{A}^{n \times n}$
+** reference
+- SE:Why is determinant a multilinear function?([[https://math.stackexchange.com/questions/1403735/why-is-determinant-a-multilinear-function][link]])
+* Eq.46
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial x} \big(\det(\mathbf{Y})\big) =
+  \det(\mathbf{Y})
+       \text{tr}\big[
+           \mathbf{Y}^{-1} \frac{\partial }{\partial x} \mathbf{Y}
+       \big]
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** proof
+Using Jacobi's formula, see wiki reference. additionally, the proof in the pdf
+also worth to see:
+
+TODO
+
+** reference
+- WIKI:determinant#derivative ([[https://en.wikipedia.org/wiki/Determinant#Derivative][link]])
+- WIKI:Jacobi's formula ([[https://en.wikipedia.org/wiki/Jacobi%27s_formula][link]])
+- SE:Proof for the derivative of the determinant of a matrix ([[https://mathoverflow.net/questions/214908/proof-for-the-derivative-of-the-determinant-of-a-matrix][link]])
+- SE:A limit with determinants ([[https://math.stackexchange.com/questions/1820036/a-limit-with-determinants][link]])
+- PDF:The derivative of a determinant - at NTNU ([[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiX0IiNk6DtAhVnzTgGHUW7Cu0QFjAAegQIAhAC&url=https%3A%2F%2Ffolk.ntnu.no%2Fhanche%2Fnotes%2Fdiffdet%2Fdiffdet.pdf&usg=AOvVaw0ySfzUD3lzD7D0dOIbpS5W][link]])
+
+* Eq.47
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \sum_k \frac{\partial }{\partial X_{ik}} \big(\det(\mathbf{X}) \big) X_{jk}
+  = \delta_{ij} \det(\mathbf{X})
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+TODO
+
+* Eq.48
+
+ TODO
