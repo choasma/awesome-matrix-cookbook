@@ -1,0 +1,100 @@
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:Fri Nov 27 22:30:50 2020
+#+DESCRIPTION:
+#+KEYWORDS:
+#+INCLUDE: "../header.org"
+
+
+* Basic essentials
+This section illustrates some essentials to make the proof of equations. The following hits are usually being adopted
+to solve the derivative problems (just in my opinion).
+
+* Taylor expansion
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+f(\mathbf{x} + d\mathbf{x}) 
+    = f(\mathbf{x}) + \mathbf{g}^T d\mathbf{x} + \frac12 d\mathbf{x}^T\mathbf{H}d\mathbf{x} + \epsilon(\left\|d\mathbf{x}\right\|^3)
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+In other words, the most of the gradient in matrix cookbook can be found if you
+can derive the equation into the form of inner product of two terms. One term
+is the small step variable (e.g., $d\mathbf{x}$), the other one is the rest,
+which is then your derivative answer. Additionally, always keeps in mind that 
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+ $\text{tr}(\mathbf{A}^T\mathbf{B}) = \left<\mathbf{A},\mathbf{B}\right>_F$ ,
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+
+ that the trace of two matrices is the frobenious inner product ([[https://en.wikipedia.org/wiki/Frobenius_inner_product][link]])
+
+** Example:  $\nabla_\mathbf{X} \mathbf{a}^T \mathbf{X} \mathbf{b} = \mathbf{a}\mathbf{b}^T$
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+f(\mathbf{X} + \mathbf{H}) &= \mathbf{a}^T (\mathbf{X} + \mathbf{H}) \mathbf{b} \\
+                           &= \mathbf{a}^T \mathbf{X} \mathbf{b} + \mathbf{a}^T \mathbf{H} \mathbf{b}\\
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+Then 
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+f(\mathbf{X}+\mathbf{H}) - f(\mathbf{X}) &= \mathbf{a}^T \mathbf{H} \mathbf{b} \\
+                                         &= \text{tr}(\mathbf{a}^T \mathbf{H} \mathbf{b}) \\
+                                         &= \text{tr}(\mathbf{b} \mathbf{a}^T \mathbf{H} ) \\
+                                         &= \left<\mathbf{a}\mathbf{b}^T, \mathbf{H}\right>
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+So $\mathbf{a}\mathbf{b}^T$ is your answer. See ([[https://math.stackexchange.com/a/2189525/852078][link]]). Please also remember all
+the properties of trace operator.
+
+* Component-wised derivation
+
+It is basically you find the gradient from the perspective of its components. Let's
+say you want to find $\nabla_{\mathbf{X}} f(\mathbf{X})$, you could find the
+$\nabla_{X_{ij}}f(\mathbf{X})$ first and then stack all the solution
+together to form the matrix. Personally, I think the indicies would get
+cluttered at the end so I prefer the previous approach more.
+
+** Example:  $\nabla_\mathbf{X} \mathbf{a}^T \mathbf{X} \mathbf{b} = \mathbf{a}\mathbf{b}^T$ (again)
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+    \mathbf{a}^T\mathbf{X}\mathbf{b} = \sum_{j,i} a_j X_{ij} b_i
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+then
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+    \frac{\partial }{\partial X_{ij}} \mathbf{a}^T\mathbf{X}\mathbf{b} = a_jb_i
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+Then stacking those $\frac{\partial }{\partial X_{ij}}$ into full matrix you'll
+get the answer. See ([[https://math.stackexchange.com/a/2190586/852078][link]])
+
+* Useful link
+- Taylor series wiki ([[https://en.wikipedia.org/wiki/Taylor_series][link]])
+- Taylor series e176 ([[http://fourier.eng.hmc.edu/e176/lectures/NM/node45.html][link]])
+- Directional derivative wiki ([[https://en.wikipedia.org/wiki/Directional_derivative][link]]) 

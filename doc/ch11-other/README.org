@@ -1,0 +1,11 @@
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:
+#+OPTIONS: H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t
+#+DESCRIPTION:
+#+KEYWORDS:
+#+INCLUDE: "../header.org"
+* Sec11 Others
+Other topic goes here
+* Content
+- Sec11.1 Neural network ([[file:01-nn.org][link]])

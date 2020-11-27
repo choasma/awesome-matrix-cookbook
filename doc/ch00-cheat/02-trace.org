@@ -1,0 +1,14 @@
+* Trace
+
+$\text{tr}(\mathbf{A}^T\mathbf{B}) = \sum_{ij}(\mathbf{A} \odot \mathbf{B})_{ij}$
+
+$test$
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+asdfasdfd
+\end{split}
+\end{equation}
+#+END_LaTeX
+

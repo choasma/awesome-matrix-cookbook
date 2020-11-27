@@ -1,3 +1,14 @@
+* Frobenious norm of two activations
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\left \| \sigma(\mathbf{x1}^T\mathbf{W}) - \sigma(\mathbf{x2}^T\mathbf{W})  \right \|^2_{F}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+
 * TODO
 
 https://math.stackexchange.com/questions/2662141/matrix-derivative-of-transpose

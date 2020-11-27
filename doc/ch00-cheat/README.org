@@ -1,0 +1,15 @@
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:Fri Nov 27 22:36:33 2020
+#+DESCRIPTION:
+#+KEYWORDS:
+#+INCLUDE: "../header.org"
+* Ch00 Cheatsheet
+All cheatsheets of the math will be compiled here for convenience
+* Content
+- Sec00.1 Think ([[file:01-think.org][link]])
+- Sec00.2 Trace ([[file:02-trace.org][link]])
+- Sec00.3 Determinant ([[file:03-det.org][link]])
+- Sec00.4 Inverse ([[file:04-inv.org][link]])
+- Sec00.5 Norm ([[file:05-norm.org][link]])
+- Sec00.6 Eigen ([[file:06-eig.org][link]])

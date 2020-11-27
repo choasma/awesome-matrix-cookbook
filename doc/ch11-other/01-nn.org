@@ -1,0 +1,233 @@
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:Fri Nov 27 22:14:39 2020
+#+DESCRIPTION:
+#+KEYWORDS:
+#+INCLUDE: "../header.org"
+* Frobenius norm of two activations 
+** problem 
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{W}} \left \| \mathbf{z}_1 - \mathbf{z}_2  \right \|^2_{2}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+where 
+$\mathbf{z}_1 = \sigma(\mathbf{x}_1^T\mathbf{W})$, first data point
+$\mathbf{z}_2 = \sigma(\mathbf{x}_2^T\mathbf{W})$, second data point
+where $\sigma(\cdot)$ denotes the element-wise operator nonlinear function
+applied on the argumnet
+
+** derivation
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \left \| \mathbf{z}_1 - \mathbf{z}_2  \right \|^2_{2}
+  &= \text{tr}\big((\mathbf{z}_1 - \mathbf{z}_2)^T(\mathbf{z}_1 - \mathbf{z}_2)\big)\\
+  &= \sum_k \big((\mathbf{z}_1 - \mathbf{z}_2)_{k}\big)^2 \\
+  &= \sum_k \big((\mathbf{z}_1)_{k} - (\mathbf{z}_2)_{k}\big)^2 \\
+  &= \sum_k \big( \sigma(\mathbf{x}^T_1\mathbf{w}_k) - \sigma(\mathbf{x}^T_2\mathbf{w}_k)\big)^2 \\  
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+Where $\mathbf{w}_i$ detnoes the ith column vector of $\mathbf{W}$, thus
+$(\mathbf{z}_i)_k = \sigma(\mathbf{x}_1^T\mathbf{w_k})$, the kth element of
+$\mathbf{z}_i$ vector (sorry the indices might be confused)
+
+Then accoding to differentiation rules, we can take the derivative at each term
+and later do the summation. Before taking the derivative $\frac{\partial
+}{\partial \mathbf{W}}$ as a whole, we first take the drivative only wrt each
+column of $\mathbf{W}$
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{w}_{i}} \big( \sigma(\mathbf{x}^T_1\mathbf{w}_k) - \sigma(\mathbf{x}^T_2\mathbf{w}_k)\big)^2 
+  &= 2((\mathbf{z}_1)_k - (\mathbf{z}_2)_k) (
+  \frac{\partial }{\partial \mathbf{w}_{i}} \sigma(\mathbf{x}^T_1\mathbf{w}_k) -
+  \frac{\partial }{\partial \mathbf{w}_{i}} \sigma(\mathbf{x}^T_1\mathbf{w}_k) \\
+  &= \left\{\begin{matrix}
+         2\bigg((\mathbf{z}_1)_k - (\mathbf{z}_2)_k\bigg)
+             \bigg(
+                 \sigma'(\mathbf{x}^T_1\mathbf{w}_k)\mathbf{x}^T_1 -
+                 \sigma'(\mathbf{x}^T_2\mathbf{w}_k)\mathbf{x}^T_2
+             \bigg) & ,\text{when} \ k=i 
+         \\ 
+         0 & ,\text{when} \ k \neq i
+     \end{matrix}\right. \\
+  &= \left\{\begin{matrix}
+         \mathbf{r}_k & ,\text{when} \ k=i 
+         \\ 
+         0 & ,\text{when} \ k \neq i
+     \end{matrix}\right.
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+WThen it is trivial that the derivative wrt $\mathbf{W}$ is all zero rows except
+at the entry $k$:
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial \mathbf{W}} f(\mathbf{x}_1, \mathbf{x}_2) = \frac{\partial }{\partial \mathbf{W}} \big( \sigma(\mathbf{x}^T_1\mathbf{w}_k) - \sigma(\mathbf{x}^T_2\mathbf{w}_k)\big)^2 =
+\begin{bmatrix}
+- \ \mathbf{0}^T - \\ \vdots \\ - \mathbf{r}_k^T - \\  \vdots \\ - \ \mathbf{0}^T - 
+\end{bmatrix}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+Where $f: \mathbb{R}^{d_x} \rightarrow \mathbb{R}$, and $\mathbf{R} \in
+\mathbb{R}^{d_x \times d_z}$ for notation convenience, each row is $\mathbf{r}_k^T$
+So putting all together
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{W}} \left \| \mathbf{z}_1 - \mathbf{z}_2  \right \|^2_{2}
+  &= \sum_k \frac{\partial }{\partial \mathbf{W}} \big( \sigma(\mathbf{x}^T_1\mathbf{w}_k) - \sigma(\mathbf{x}^T_2\mathbf{w}_k)\big)^2 \\
+  &= \mathbf{R} \\
+  &= \begin{bmatrix}
+         \vdots \\ - \mathbf{r}_k^T - \\  \vdots
+     \end{bmatrix} \\
+  &= \begin{bmatrix}
+         \vdots \\ 2\bigg((\mathbf{z}_1)_k - (\mathbf{z}_2)_k\bigg)
+             \bigg(
+                 \sigma'(\mathbf{x}^T_1\mathbf{w}_k)\mathbf{x}^T_1 -
+                 \sigma'(\mathbf{x}^T_2\mathbf{w}_k)\mathbf{x}^T_2
+             \bigg) \\  \vdots
+     \end{bmatrix} \\
+  &= \begin{bmatrix}
+         \vdots \\ 2\bigg((\mathbf{z}_1)_k - (\mathbf{z}_2)_k\bigg)
+             \bigg(
+                 \sigma'(\mathbf{x}^T_1\mathbf{w}_k)\mathbf{x}^T_1
+             \bigg) \\  \vdots
+           \end{bmatrix}
+           -
+           \begin{bmatrix}
+         \vdots \\ 2\bigg((\mathbf{z}_1)_k - (\mathbf{z}_2)_k\bigg)
+             \bigg(
+                 \sigma'(\mathbf{x}^T_2\mathbf{w}_k)\mathbf{x}^T_2
+             \bigg) \\  \vdots
+           \end{bmatrix}
+           \\
+   &= 2\big((\mathbf{z}_1 - \mathbf{z}_2) \odot \mathbf{z}'_1\big) \mathbf{x}_1^T - 2\big((\mathbf{z}_1 - \mathbf{z}_2) \odot \mathbf{z}'_2 \big)\mathbf{x}_2^T
+   \end{split}
+\end{equation}
+#+END_LaTeX
+
+* Backpropagation
+** problem
+Let's say it is nonlinear 2 layers neural network with the following objective
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  f(\mathbf{x}, \mathbf{y}; \mathbf{W^{(1)}}, \mathbf{W^{(2)}}) = \left \| \mathbf{y} - \mathbf{o}  \right \|^2_{2}
+  = \text{tr}\big((\mathbf{y}-\mathbf{o})^T(\mathbf{y}-\mathbf{o})\big) = \sum_i (\mathbf{y}_i - \mathbf{o}_i)^2
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+where
+the training input $\mathbf{x} \in \mathbb{R}^{d_x}$ 
+the training target $\mathbf{y} \in \mathbb{R}^{d_y}$ 
+the network prediction $\mathbf{o}^T =
+\text{softmax}((\sigma(\mathbf{x}^T\mathbf{W}^{(1)}))\mathbf{W}^{(2)}) = \text{softmax}(\mathbf{z}^T\mathbf{W}^{(2)}) \in \mathbb{R}^{d_y}$ , 
+
+** derivation
+We are going to find the derivative of the neural network wrt its all weights
+$\mathbf{W}^{(1)}$, $\mathbf{W}^{(2)}$:
+
+*** d/dW(2)
+
+Let's look closer at the derivative of single term in the trace wrt the weight
+vector $\mathbf{w}_k^{(2)}$
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{w}^{(2)}_k} (\mathbf{y}_i - \mathbf{o}_i)^2
+  &= 2(\mathbf{y}_i - \text{softmax}(\mathbf{z}^T \mathbf{w}_i)) \cdot (-1) \cdot \text{softmax}'(\mathbf{z}_i^T \mathbf{w}_i) \mathbf{z}^T \\
+  &= -2(\mathbf{y}_i - \mathbf{o}_i)\cdot \mathbf{o}'_{i} \cdot \mathbf{z}^T \\
+  &= -2 \mathbf{e}^{(2)}_i \cdot \mathbf{z}^T \\
+  \quad \text{when k=i else } \mathbf{0}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+wrt whole weight $\mathbf{W}$ then it is not so difficult to get the answer:
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{W}^{(2)}} (\mathbf{y} - \mathbf{o})^2
+  &= \bigg(
+  (\mathbf{y}_i - \mathbf{o}_i) \cdot (-1) \cdot \mathbf{o}'_i \mathbf{z}^T
+  \bigg)_i\\
+  &= - 2(\mathbf{y} - \mathbf{o}) \odot \mathbf{o}' \cdot \mathbf{z}^T \\
+  &= - 2 \mathbf{e}^{(2)} \cdot \mathbf{z}^T \\
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+where $\mathbf{e}^{(2)}$ denotes the error signal vector from layer 2 (output
+layer)
+
+*** d/dW(1)
+
+Again.. it's better just look at single column of the weight $\mathbf{w}_k^{(2)}$
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{w}^{(1)}_k} (\mathbf{y}_i - \mathbf{o}_i)^2 
+    &= -2(\mathbf{y}_i - \mathbf{o}_i) \cdot \mathbf{o}'_i \cdot \frac{\partial }{\partial \mathbf{w}^{(1)}_k} \big( \mathbf{z}^T \mathbf{w}^{(2)}_{i} \big) \\
+    & = \mathbf{e}_{i}^{(2)} \frac{\partial }{\partial \mathbf{w}^{(1)}_k} \big( \mathbf{z}^T \mathbf{w}^{(2)}_{i} \big)
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+and take the look at the last term
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial \mathbf{w}^{(1)}_k} \big( \mathbf{z}^T \mathbf{w}^{(2)}_{i} \big) 
+&= \frac{\partial }{\partial \mathbf{w}^{(1)}_k} \big( \sigma(\mathbf{x}^T \mathbf{W}^{(1)}) \mathbf{w}^{(2)}_{i} \big) \\
+&= \frac{\partial }{\partial \mathbf{w}^{(1)}_k} \big( \sum_j \big(\sigma(\mathbf{x}^T \mathbf{w}^{(1)}_j)\big) \mathbf{w}^{(2)}_{i} \big) \\
+&= \sum_j \frac{\partial }{\partial \mathbf{w}^{(1)}_k} \big( \big(\sigma(\mathbf{x}^T \mathbf{w}^{(1)}_j) \mathbf{w}^{(2)}_{i} \big)  \big) \\
+&= \sum_j \big( \big(\sigma'(\mathbf{x}^T \mathbf{w}^{(1)}_j) \frac{\partial }{\partial \mathbf{w}^{(1)}_k} \big( \mathbf{w}_j^{(1)} \big) \mathbf{w}^{(2)}_{i} \big)  \big) \\
+&= \sigma'(\mathbf{x}^T \mathbf{w}^{(1)}_j)  \mathbf{w}^{(2)}_{i} \mathbf{x}^T\\
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+So the final derivation would be 
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{w}^{(1)}_k} (\mathbf{y}_i - \mathbf{o}_i)^2 
+&= \mathbf{e}^{(2)}_{i} \cdot \sigma'(\mathbf{x}^T \mathbf{w}^{(1)}_j) \cdot \mathbf{w}^{(2)}_{i} \mathbf{x}^T
+&= \mathbf{e}^{(1)}_{i} \mathbf{x}^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+It's not difficult to see the final derivation is
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{W}^{(1)}} (\mathbf{y} - \mathbf{o})^2
+  &= - 2 \mathbf{e}^{(1)} \cdot \mathbf{x}^T \\
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+

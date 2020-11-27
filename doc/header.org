@@ -1,0 +1,11 @@
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:Fri Nov 27 22:15:33 2020
+#+DESCRIPTION:
+#+KEYWORDS:
+
+#+HTML_HEAD: <script type='text/javascript' src='https://web.stanford.edu/~ksb/js/jquery-min.js'></script>
+#+HTML_HEAD: <script type='text/javascript' src='https://web.stanford.edu/~ksb/js/jquery.inc.js'></script>
+#+HTML_HEAD: <script type='text/javascript' src='https://web.stanford.edu/~ksb/js/popup_ie.js'></script>
+#+HTML_HEAD: <script type='text/javascript' src='https://web.stanford.edu/~ksb/js/esquemadorg.js'></script>
+#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='https://web.stanford.edu/~ksb/css/esquemadorg.css'></link>

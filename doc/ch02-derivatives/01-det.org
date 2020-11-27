@@ -1,4 +1,4 @@
-* Derivative of determinant
+* Sec2.1 Derivative of determinant
 
 * Cheatsheet
 ** properties

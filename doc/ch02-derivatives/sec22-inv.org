@@ -1,2 +1,0 @@
-* TODO
-https://math.stackexchange.com/questions/3023692/derivative-of-inverse-matrix-by-itself

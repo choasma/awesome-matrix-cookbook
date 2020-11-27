@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-11-27 Fri 22:35 -->
+<!-- 2020-11-27 Fri 22:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -244,6 +244,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -251,89 +273,165 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd74ec6f">1. Portal</a></li>
-<li><a href="#orgc848108">2. Structure</a>
+<li><a href="#org0ee8d27">1. Basic essentials</a></li>
+<li><a href="#org3966b31">2. Taylor expansion</a>
 <ul>
-<li><a href="#org45c8d3b">2.1. topic</a>
-<ul>
-<li><a href="#orge25426d">2.1.1. problem</a></li>
-<li><a href="#orgaaf2c54">2.1.2. derivation</a></li>
-<li><a href="#orgfb3ef38">2.1.3. reference</a></li>
+<li><a href="#org3427413">2.1. Example:  \(\nabla_\mathbf{X} \mathbf{a}^T \mathbf{X} \mathbf{b} = \mathbf{a}\mathbf{b}^T\)</a></li>
 </ul>
 </li>
+<li><a href="#org06c7643">3. Component-wised derivation</a>
+<ul>
+<li><a href="#orgddb46e3">3.1. Example:  \(\nabla_\mathbf{X} \mathbf{a}^T \mathbf{X} \mathbf{b} = \mathbf{a}\mathbf{b}^T\) (again)</a></li>
 </ul>
 </li>
+<li><a href="#orgfccf18c">4. Useful link</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd74ec6f" class="outline-2">
-<h2 id="orgd74ec6f"><span class="section-number-2">1</span> Portal</h2>
+
+<div id="outline-container-org0ee8d27" class="outline-2">
+<h2 id="org0ee8d27"><span class="section-number-2">1</span> Basic essentials</h2>
 <div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li>ch-1 preface (<a href="preface.html">link</a>)</li>
-<li>ch00 cheat (<a href="ch00-cheat/README.html">link</a>)</li>
-<li>ch01 Basic (<a href="ch01-basic/README.html">link</a>)</li>
-<li>ch02 Derivatives (<a href="ch02-derivatives/README.html">link</a>)</li>
-<li>ch03 Inverses (<a href="ch03-inverse/README.html">link</a>)</li>
-<li>ch04 Complex Matrices (<a href="ch04-compmat/README.html">link</a>)</li>
-<li>ch05 Solutions and Decomposition (<a href="ch05-sol-and-decomp/README.html">link</a>)</li>
-<li>ch06 Statistics and Probability (<a href="ch06-stat-and-prob/README.html">link</a>)</li>
-<li>ch07 Multivariate Distribution (<a href="ch07-mul-dist/README.html">link</a>)</li>
-<li>ch08 Gaussians (<a href="ch08-gaussian/README.html">link</a>)</li>
-<li>ch09 Special Matrices (<a href="ch09-special/README.html">link</a>)</li>
-<li>ch10 Function and operators (<a href="ch10-func/README.html">link</a>)</li>
-<li>ch11 Others (<a href="ch11-other/README.html">link</a>)</li>
-</ul>
+<p>
+This section illustrates some essentials to make the proof of equations. The following hits are usually being adopted
+to solve the derivative problems (just in my opinion).
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgc848108" class="outline-2">
-<h2 id="orgc848108"><span class="section-number-2">2</span> Structure</h2>
+<div id="outline-container-org3966b31" class="outline-2">
+<h2 id="org3966b31"><span class="section-number-2">2</span> Taylor expansion</h2>
 <div class="outline-text-2" id="text-2">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+f(\mathbf{x} + d\mathbf{x}) 
+    = f(\mathbf{x}) + \mathbf{g}^T d\mathbf{x} + \frac12 d\mathbf{x}^T\mathbf{H}d\mathbf{x} + \epsilon(\left\|d\mathbf{x}\right\|^3)
+\end{split}
+\end{equation}
+
+</div>
+
 <p>
-Each item of the section (org file) is structured like the following:
+In other words, the most of the gradient in matrix cookbook can be found if you
+can derive the equation into the form of inner product of two terms. One term
+is the small step variable (e.g., \(d\mathbf{x}\)), the other one is the rest,
+which is then your derivative answer. Additionally, always keeps in mind that 
+</p>
+
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+ $\text{tr}(\mathbf{A}^T\mathbf{B}) = \left<\mathbf{A},\mathbf{B}\right>_F$ ,
+\end{split}
+\end{equation}
+
+</div>
+
+
+<p>
+that the trace of two matrices is the frobenious inner product (<a href="https://en.wikipedia.org/wiki/Frobenius_inner_product">link</a>)
 </p>
 </div>
 
-<div id="outline-container-org45c8d3b" class="outline-3">
-<h3 id="org45c8d3b"><span class="section-number-3">2.1</span> topic</h3>
+<div id="outline-container-org3427413" class="outline-3">
+<h3 id="org3427413"><span class="section-number-3">2.1</span> Example:  \(\nabla_\mathbf{X} \mathbf{a}^T \mathbf{X} \mathbf{b} = \mathbf{a}\mathbf{b}^T\)</h3>
 <div class="outline-text-3" id="text-2-1">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+f(\mathbf{X} + \mathbf{H}) &= \mathbf{a}^T (\mathbf{X} + \mathbf{H}) \mathbf{b} \\
+                           &= \mathbf{a}^T \mathbf{X} \mathbf{b} + \mathbf{a}^T \mathbf{H} \mathbf{b}\\
+\end{split}
+\end{equation}
+
+</div>
+
 <p>
-The topic is typically named with the equation number in the book
+Then 
+</p>
+
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+f(\mathbf{X}+\mathbf{H}) - f(\mathbf{X}) &= \mathbf{a}^T \mathbf{H} \mathbf{b} \\
+                                         &= \text{tr}(\mathbf{a}^T \mathbf{H} \mathbf{b}) \\
+                                         &= \text{tr}(\mathbf{b} \mathbf{a}^T \mathbf{H} ) \\
+                                         &= \left<\mathbf{a}\mathbf{b}^T, \mathbf{H}\right>
+\end{split}
+\end{equation}
+
+</div>
+
+<p>
+So \(\mathbf{a}\mathbf{b}^T\) is your answer. See (<a href="https://math.stackexchange.com/a/2189525/852078">link</a>). Please also remember all
+the properties of trace operator.
 </p>
 </div>
-<div id="outline-container-orge25426d" class="outline-4">
-<h4 id="orge25426d"><span class="section-number-4">2.1.1</span> problem</h4>
-<div class="outline-text-4" id="text-2-1-1">
+</div>
+</div>
+
+<div id="outline-container-org06c7643" class="outline-2">
+<h2 id="org06c7643"><span class="section-number-2">3</span> Component-wised derivation</h2>
+<div class="outline-text-2" id="text-3">
 <p>
-what's the problem of the topic
+It is basically you find the gradient from the perspective of its components. Let's
+say you want to find \(\nabla_{\mathbf{X}} f(\mathbf{X})\), you could find the
+\(\nabla_{X_{ij}}f(\mathbf{X})\) first and then stack all the solution
+together to form the matrix. Personally, I think the indicies would get
+cluttered at the end so I prefer the previous approach more.
+</p>
+</div>
+
+<div id="outline-container-orgddb46e3" class="outline-3">
+<h3 id="orgddb46e3"><span class="section-number-3">3.1</span> Example:  \(\nabla_\mathbf{X} \mathbf{a}^T \mathbf{X} \mathbf{b} = \mathbf{a}\mathbf{b}^T\) (again)</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+    \mathbf{a}^T\mathbf{X}\mathbf{b} = \sum_{j,i} a_j X_{ij} b_i
+\end{split}
+\end{equation}
+
+</div>
+
+<p>
+then
+</p>
+
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+    \frac{\partial }{\partial X_{ij}} \mathbf{a}^T\mathbf{X}\mathbf{b} = a_jb_i
+\end{split}
+\end{equation}
+
+</div>
+
+<p>
+Then stacking those \(\frac{\partial }{\partial X_{ij}}\) into full matrix you'll
+get the answer. See (<a href="https://math.stackexchange.com/a/2190586/852078">link</a>)
 </p>
 </div>
 </div>
-<div id="outline-container-orgaaf2c54" class="outline-4">
-<h4 id="orgaaf2c54"><span class="section-number-4">2.1.2</span> derivation</h4>
-<div class="outline-text-4" id="text-2-1-2">
-<p>
-derivation math is here
-</p>
 </div>
-</div>
-<div id="outline-container-orgfb3ef38" class="outline-4">
-<h4 id="orgfb3ef38"><span class="section-number-4">2.1.3</span> reference</h4>
-<div class="outline-text-4" id="text-2-1-3">
+
+<div id="outline-container-orgfccf18c" class="outline-2">
+<h2 id="orgfccf18c"><span class="section-number-2">4</span> Useful link</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
-<li>blah blah ([[][link]])</li>
+<li>Taylor series wiki (<a href="https://en.wikipedia.org/wiki/Taylor_series">link</a>)</li>
+<li>Taylor series e176 (<a href="http://fourier.eng.hmc.edu/e176/lectures/NM/node45.html">link</a>)</li>
+<li>Directional derivative wiki (<a href="https://en.wikipedia.org/wiki/Directional_derivative">link</a>)</li>
 </ul>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: Fri Nov 27 22:15:21 2020 Fri Nov 27 22:15:33 2020</p>
+<p class="date">Date: Fri Nov 27 22:30:50 2020 Fri Nov 27 22:15:33 2020</p>
 <p class="author">Author: Wan-Duo Kurt Ma Wan-Duo Kurt Ma</p>
-<p class="date">Created: 2020-11-27 Fri 22:35</p>
+<p class="date">Created: 2020-11-27 Fri 22:36</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
