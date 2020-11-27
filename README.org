@@ -1,4 +1,12 @@
-* Hera
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:Fri Nov 27 22:49:14 2020
+#+OPTIONS: H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t
+#+DESCRIPTION:
+#+KEYWORDS:
+#+INCLUDE: ./doc/header.org
+
+* Awesome-matrix-cookbook
 
 My study notes of Matrix Cook book ([[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixmciLhZvtAhU-63MBHT5ZDVcQFjABegQIBBAC&url=https%3A%2F%2Fwww.ics.uci.edu%2F~welling%2Fteaching%2FKernelsICS273B%2FMatrixCookBook.pdf&usg=AOvVaw1CtNS3lRl-5H1oZbFqKlJr][link]]). 
 
@@ -9,13 +17,21 @@ This is still in the early stage of development. The motivation of this is I'd
 like to put all references from the internet in one place, as well as refresh
 my math skill for my PhD study. Feel free to correct the answer that I have provided.
 
-Your opinions are welcome! I'm a little learner in this world
+Your opinions are welcome! I'm a little learner in this world.
 
 * Usage
 
 I have a hard time to work on math rendering in github. But instead I would
 render all org files into htmls. So you could clone the project and open up the
-html with the browser. Your entry point is =./doc/preface.html=.
+html with the browser. Your entry point is =./doc/preface.html=. In short, 
+
+#+begin_quote
+git clone https://github.com/choasma/awesome-matrix-cookbook.git
+#+end_quote
+
+#+begin_quote
+open ./doc/preface.html
+#+end_quote
 
 Or if you use Emacs editor ([[https://www.gnu.org/software/emacs/download.html][link]]) together with proper installations (e.g.,
 org-mode, mathjax, ...), you can see the better visualization in org file.
@@ -28,7 +44,7 @@ Here is the repository structure
 root ┬ doc # the pages with derivation
      │  ├ chxx-xxx # each chapter
      │  └ ...
-     └ source # some python scripts here 
+     └ source # some python/julia scripts here 
 #+end_src
 
 * Plan
