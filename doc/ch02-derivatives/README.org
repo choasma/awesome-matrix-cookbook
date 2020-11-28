@@ -1,2 +1,20 @@
+#+TITLE:Ch02 Derivatives
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:Sun Nov 29 00:10:41 2020
+#+OPTIONS: H:2 num:nil toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t
+#+DESCRIPTION:
+#+KEYWORDS:
+#+INCLUDE: "../header.org"
+
 * Ch02 Derivatives
-TODO
+* Portal
+- sec2.1 Derivatives of a Determinant ([[file:01-det.org][link]])
+- sec2.2 Derivatives of an Inverse ([[file:02-inv.org][link]])
+- sec2.3 Derivatives of Eigenvalues ([[file:03-eig.org][link]])
+- sec2.4 Derivatives of Matrices, Vectors and Scalar Forms ([[file:04-mat.org][link]])
+- sec2.5 Derivatives of Traces ([[file:05-trace.org][link]])
+- sec2.6 Derivatives of vector norms ([[file:06-vnorm.org][link]])
+- sec2.7 Derivatives of matrix norms ([[file:07-mnorm.org][link]])
+- sec2.8 Derivatives of Structured Matrices ([[file:08-smat.org][link]])
+- back to preface ([[file:../preface.org][link]])

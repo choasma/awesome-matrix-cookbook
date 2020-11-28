@@ -1,0 +1,213 @@
+#+TITLE:Sec2.4 Derivatives of Mat/Vec/Scalar
+#+AUTHOR: Wan-Duo Kurt Ma
+#+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
+#+DATE:Sat Nov 28 21:32:25 2020
+#+DESCRIPTION:
+#+KEYWORDS:
+#+INCLUDE: ../header.org
+
+* Eq69 
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{x}} \big(\mathbf{x}^T \mathbf{a}\big)
+  = \frac{\partial }{\partial \mathbf{x}} \big(\mathbf{a}^T \mathbf{x}\big)
+  = \mathbf{a}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial \mathbf{x}} \big(\mathbf{x}^T \mathbf{a}\big)
+  &= \big[... ,\frac{\partial }{\partial x_j} \sum_k x_ka_k, ... \big]^T \\
+  &= \big[... , a_j, ... \big]^T \\
+  &= \mathbf{a}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq70
+** problem
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial \mathbf{X}} \big(\mathbf{a}^T\mathbf{X}\mathbf{b}\big) = \mathbf{a}\mathbf{b}^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial X_{ij}} \big(\mathbf{a}^T\mathbf{X}\mathbf{b}\big)
+  &= \frac{\partial }{\partial X_{ij}} \big( \sum_k \mathbf{a}^T \mathbf{x}_k b_k \big) \\
+  &= \frac{\partial }{\partial X_{ij}} \big( \mathbf{a}^T \mathbf{x}_j b_j \big) \quad \text{Those k!=j terms are zero.}\\
+  &= \frac{\partial }{\partial X_{ij}} \big( \sum_q a_q X_{qj} b_j \big) \\
+  &= \frac{\partial }{\partial X_{ij}} \big( a_i X_{ij} b_j \big) \quad \text{Those q!=i terms are zero.}\\ \\
+  &= a_i b_j \\
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+ To stack all the derivative with respect to $X_{ij}$ then you'll get the answer.
+
+* Eq71
+
+**  problem
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial \mathbf{X}} \big(\mathbf{a}^T\mathbf{X}^T\mathbf{b}\big) = \mathbf{a}\mathbf{b}^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+
+ #+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial X_{ij}} \big(\mathbf{a}^T\mathbf{X}^T\mathbf{b}\big)
+  &= \frac{\partial }{\partial X_{ij}} \big( (\mathbf{X}\mathbf{a})^T \mathbf{b} \big) \\
+  &= \frac{\partial }{\partial X_{ij}} \big( \sum_k (\mathbf{x}_k a_k)^T \mathbf{b} \big) \\
+  &= \frac{\partial }{\partial X_{ij}} \big( \sum_k (a_k \mathbf{x}_k^T)  \mathbf{b} \big) \quad \text{rearange..}\\
+  &= \frac{\partial }{\partial X_{ij}} \big( a_j \mathbf{x}_j^T  \mathbf{b} \big) \quad \text{Those k!=j are zeros}\\
+  &= \frac{\partial }{\partial X_{ij}} \big( a_j \sum_q (X_{qj} b_q) \big) \\
+  &= \frac{\partial }{\partial X_{ij}} \big( a_j X_{ij} b_i \big) \quad \text{Those q!=i are zeros}\\
+  &= a_j b_i
+\end{split}
+\end{equation}
+ #+END_LaTeX
+
+ which is the transpose of Eq70
+
+* Eq72
+
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial \mathbf{X}} \big(\mathbf{a}^T\mathbf{X}\mathbf{a}\big) 
+&= \frac{\partial }{\partial \mathbf{X}} \big(\mathbf{a}^T\mathbf{X}^T\mathbf{a}\big) \\
+&= \mathbf{a}\mathbf{a}^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+Simply replace vector $\mathbf{b}$ in Eq70, Eq71 then you'll get the answer.
+
+* Eq73
+**  problem
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial X_{ij}} \big(\mathbf{X}\big) = \mathbf{J}^{ij}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+As pointed in the notation in matrixcook, $\mathbf{J}^{ij}$ is the matrix basis
+which entries are all zero but entry ij is one.
+
+** derivation
+
+* Eq74
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial X_{mn}} \big((\mathbf{X}\mathbf{A})_{ij}\big)
+  = \delta_{im}(\mathbf{A})_{nj}
+  = (\mathbf{J}^{mn}\mathbf{A})_{ij}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+(\mathbf{X}\mathbf{A})_{ij} = \sum_k X_{ik} A_{kj}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+
+$\delta_{im} = 1 \iff i=m$ which means
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \delta_{im}(\mathbf{A})_{nj} = 
+  \left\{\begin{matrix}
+   \frac{\partial }{\partial X_{in}} \big(\sum_k X_{ik}A_{kj}\big) = A_{nj}& \quad \text{,if} \ m=i\\ 
+   0 & \quad \text{,if} \ m \neq i
+  \end{matrix}\right.
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+and the last equality is 
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+    \mathbf{J}^{mn}\mathbf{A} = \mathbf{Q}
+= \begin{bmatrix}
+    \vdots \\ 
+    -\mathbf{q}_p^T-
+    \\ \vdots
+  \end{bmatrix}
+\quad
+\text{where} \ \mathbf{q}_p^T = 
+\left\{\begin{matrix}
+[A_{n1},A_{n2},...] & \text{,if} \ p = m \\
+\mathbf{0}^T & \text{,if} \ p \neq m
+\end{matrix}\right.
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+Such that
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+(\mathbf{J}^{mn}\mathbf{A})_{ij}
+= Q_{ij}
+= \left\{\begin{matrix}
+   A_{nj}& \quad \text{,if} \ m=i\\ 
+   0 & \quad \text{,if} \ m \neq i
+  \end{matrix}\right.
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+
+ 
+* Eq75
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \frac{\partial }{\partial X_{mn}} \big((\mathbf{X}^T\mathbf{A})_{ij}\big)
+  = \delta_{in}(\mathbf{A})_{mj}
+  = (\mathbf{J}^{nm}\mathbf{A})_{ij}
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+
+Simply reverse the notation m and n in Eq74.

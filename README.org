@@ -8,7 +8,7 @@
 
 * Awesome-matrix-cookbook
 
-My study notes of Matrix Cook book ([[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixmciLhZvtAhU-63MBHT5ZDVcQFjABegQIBBAC&url=https%3A%2F%2Fwww.ics.uci.edu%2F~welling%2Fteaching%2FKernelsICS273B%2FMatrixCookBook.pdf&usg=AOvVaw1CtNS3lRl-5H1oZbFqKlJr][link]]). 
+My study notes of Matrix Cook book ([[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixmciLhZvtAhU-63MBHT5ZDVcQFjABegQIBBAC&url=https%3A%2F%2Fwww.ics.uci.edu%2F~welling%2Fteaching%2FKernelsICS273B%2FMatrixCookBook.pdf&usg=AOvVaw1CtNS3lRl-5H1oZbFqKlJr][link]]) Version: November 15, 2012. 
 
 This repository aims at providing the proof of the derivatives in the book, 
 having huristic understanding of matrix derivative.
