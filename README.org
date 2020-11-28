@@ -84,15 +84,15 @@ book's outline, except ch00, and ch11 that I created manually for handy
 usage. (I'm quite lazy to google them all the time because my brain has less
 neurons ... )
 
-** INPROGRESS ch00-cheat: the handy documentation about the math basic usage
-** INPROGRESS ch01-basic
-** INPROGRESS ch02-derivatives
-** TODO ch03-inverse
-** TODO ch04-compmat
-** TODO ch05-sol-and-decomp
-** TODO ch06-stat-and-prob
-** TODO ch07-mul-dist
-** TODO ch08-gaussian
-** TODO ch09-special
-** TODO ch10-func
-** INPROGRESS ch11-others: something like deep learning related topics
+- [ ] INPROGRESS ch00-cheat: the handy documentation about the math basic usage
+- [ ] INPROGRESS ch01-basic
+- [ ] INPROGRESS ch02-derivatives
+- [ ] TODO ch03-inverse
+- [ ] TODO ch04-compmat
+- [ ] TODO ch05-sol-and-decomp
+- [ ] TODO ch06-stat-and-prob
+- [ ] TODO ch07-mul-dist
+- [ ] TODO ch08-gaussian
+- [ ] TODO ch09-special
+- [ ] TODO ch10-func
+- [ ] INPROGRESS ch11-others: something like deep learning related topics
