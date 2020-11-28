@@ -2,9 +2,11 @@
 #+AUTHOR: Wan-Duo Kurt Ma
 #+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
 #+DATE:Sat Nov 28 21:32:25 2020
+#+OPTIONS: H:2 num:nil toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t
 #+DESCRIPTION:
 #+KEYWORDS:
 #+INCLUDE: ../header.org
+* Sec2.4 Derivatives of Mat/Vec/Scalar
 
 * Eq69 
 ** problem
@@ -120,6 +122,7 @@ As pointed in the notation in matrixcook, $\mathbf{J}^{ij}$ is the matrix basis
 which entries are all zero but entry ij is one.
 
 ** derivation
+N/A
 
 * Eq74
 ** problem

@@ -1,10 +1,11 @@
 #+AUTHOR: Wan-Duo Kurt Ma
 #+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
 #+DATE:Fri Nov 27 22:30:50 2020
+#+OPTIONS: H:2 num:nil toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t
 #+DESCRIPTION:
 #+KEYWORDS:
 #+INCLUDE: "../header.org"
-
+* Think
 
 * Basic essentials
 This section illustrates some essentials to make the proof of equations. The following hits are usually being adopted
