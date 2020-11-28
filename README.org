@@ -25,9 +25,7 @@ I have a hard time to work on math rendering in github. But instead I would
 render all org files into htmls. So you could clone the project and open up the
 html with the browser. Your entry point is =./doc/preface.html=. In short, 
 
-#+begin_quote
-git clone https://github.com/choasma/awesome-matrix-cookbook.git
-#+end_quote
+
 
 #+begin_quote
 open ./doc/preface.html
@@ -36,26 +34,65 @@ open ./doc/preface.html
 Or if you use Emacs editor ([[https://www.gnu.org/software/emacs/download.html][link]]) together with proper installations (e.g.,
 org-mode, mathjax, ...), you can see the better visualization in org file.
 
-* Structure
+* Visualization
+There are two ways to see this project. It seems like Github does not support
+math rendering in the readme file, and I don't really want to push the rendered
+image all the time. So instead the htmls or emacs could be your choice.
+
+#+begin_quote
+git clone https://github.com/choasma/awesome-matrix-cookbook.git
+#+end_quote
+
+Then choose one of these methods,
+
+** html
+Just see each html file that you're interested in. Your entry point is
+
+=./doc/preface.html=
+
+#+caption: html visualization
+[[file:assets/img/viz-example-html.png]]
+credit: https://web.stanford.edu/~ksb
+
+** emacs with mathjax
+You need to install Emacs though ([[https://www.gnu.org/software/emacs/download.html][link]]) with proper mathjax. If you are
+interested please let me know the quick setup. Your entry point is
+
+=./doc/preface.org=
+
+#+caption: Emacs visualization
+[[file:assets/img/viz-example-org.png]]
+
+
+* Project Structure
 
 Here is the repository structure
 
 #+begin_src python
 root ┬ doc # the pages with derivation
      │  ├ chxx-xxx # each chapter
-     │  └ ...
+     │  ├ ... # each chapter
+     │  ├ preface.html # project entry point
+     │  └ preface.org # and its source
      └ source # some python/julia scripts here 
 #+end_src
 
 * Plan
-- [ ] ch01-basic
-- [ ] ch02-derivatives
-- [ ] ch03-inverse
-- [ ] ch04-compmat
-- [ ] ch05-sol-and-decomp
-- [ ] ch06-stat-and-prob
-- [ ] ch07-mul-dist
-- [ ] ch08-gaussian
-- [ ] ch09-special
-- [ ] ch10-func
-- [ ] prepare experimental code
+
+The following chapters of this repository are basically following the matrixcook
+book's outline, except ch00, and ch11 that I created manually for handy
+usage. (I'm quite lazy to google them all the time because my brain has less
+neurons ... )
+
+** INPROGRESS ch00-cheat: the handy documentation about the math basic usage
+** INPROGRESS ch01-basic
+** INPROGRESS ch02-derivatives
+** TODO ch03-inverse
+** TODO ch04-compmat
+** TODO ch05-sol-and-decomp
+** TODO ch06-stat-and-prob
+** TODO ch07-mul-dist
+** TODO ch08-gaussian
+** TODO ch09-special
+** TODO ch10-func
+** INPROGRESS ch11-others: something like deep learning related topics
