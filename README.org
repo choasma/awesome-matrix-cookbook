@@ -55,8 +55,8 @@ Just see each html file that you're interested in. Your entry point is
 credit: https://web.stanford.edu/~ksb
 
 ** emacs with mathjax
-You need to install Emacs though ([[https://www.gnu.org/software/emacs/download.html][link]]) with proper mathjax. If you are
-interested please let me know the quick setup. Your entry point is
+You need to install Emacs though ([[https://www.gnu.org/software/emacs/download.html][link]]) equipped with mathjax modules. If you are
+interested please let me know I'll give the quick setup. Your entry point is
 
 =./doc/preface.org=
 
