@@ -1,7 +1,7 @@
 #+AUTHOR: Wan-Duo Kurt Ma
 #+EMAIL: Wan-Duo.Ma@ecs.vuw.ac.nz
 #+DATE:Fri Nov 27 22:49:14 2020
-#+OPTIONS: H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t
+#+OPTIONS: H:2 num:nil toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t
 #+DESCRIPTION:
 #+KEYWORDS:
 #+INCLUDE: ./doc/header.org
