@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-11-29 Sun 01:02 -->
+<!-- 2020-12-02 Wed 22:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sec2.5 Derivatives of Traces</title>
@@ -274,69 +274,154 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd27c979">Sec2.5 Derivatives of Traces</a></li>
-<li><a href="#orgf42b16c">Eq99</a>
+<li><a href="#org6506512">Sec2.5 Derivatives of Traces</a></li>
+<li><a href="#org6676236">Eq99</a>
 <ul>
-<li><a href="#org1cb8242">problem</a></li>
-<li><a href="#org0032e78">derivation</a></li>
+<li><a href="#org201a225">problem</a></li>
+<li><a href="#org3b71977">derivation</a></li>
 </ul>
 </li>
-<li><a href="#orgf54ad3f">Eq100</a>
+<li><a href="#org6bbd695">Eq100</a>
 <ul>
-<li><a href="#org13ca065">problem</a></li>
-<li><a href="#org84dd9b7">derivation</a></li>
+<li><a href="#org93d7885">problem</a></li>
+<li><a href="#orgca2fe90">derivation</a></li>
 </ul>
 </li>
-<li><a href="#orgf112f3e">Eq101</a>
+<li><a href="#orgd613578">Eq101</a>
 <ul>
-<li><a href="#org4d62009">problem</a></li>
-<li><a href="#org36c745f">derivation</a></li>
+<li><a href="#orgbc95fe0">problem</a></li>
+<li><a href="#orged1045a">derivation</a></li>
 </ul>
 </li>
-<li><a href="#orge6dbff5">Eq102</a>
+<li><a href="#orgf4619f3">Eq102</a>
 <ul>
-<li><a href="#orgadac173">problem</a></li>
-<li><a href="#orgfa10fb5">derivation</a></li>
+<li><a href="#org5e29f6c">problem</a></li>
+<li><a href="#orgac0a9fc">derivation</a></li>
 </ul>
 </li>
-<li><a href="#orgd12ffa8">Eq103</a>
+<li><a href="#org8e897ac">Eq103</a>
 <ul>
-<li><a href="#orgd17cbed">problem</a></li>
-<li><a href="#org6753958">derivation</a></li>
+<li><a href="#org15a88f5">problem</a></li>
+<li><a href="#orgaa79191">derivation</a></li>
 </ul>
 </li>
-<li><a href="#org7e7d807">Eq104</a>
+<li><a href="#org1950e46">Eq104</a>
 <ul>
-<li><a href="#org8d20462">problem</a></li>
-<li><a href="#orgd5ee7b9">derivation</a></li>
+<li><a href="#org84f7644">problem</a></li>
+<li><a href="#org19c17dc">derivation</a></li>
 </ul>
 </li>
-<li><a href="#org277a000">Eq105</a>
+<li><a href="#org1e2c272">Eq105</a>
 <ul>
-<li><a href="#orga383ab5">problem</a></li>
-<li><a href="#org4e9bce0">derivation</a></li>
+<li><a href="#org4cd796f">problem</a></li>
+<li><a href="#org07e413d">derivation</a></li>
+</ul>
+</li>
+<li><a href="#org52e8afb">Eq106</a>
+<ul>
+<li><a href="#orgdeb1d5f">problem</a></li>
+<li><a href="#orgb443fba">derivation</a></li>
+</ul>
+</li>
+<li><a href="#orgd3da001">Eq107</a>
+<ul>
+<li><a href="#org2214d7d">problem</a></li>
+<li><a href="#orge4486db">derivation</a></li>
+</ul>
+</li>
+<li><a href="#org20feafc">Eq108</a>
+<ul>
+<li><a href="#orgbaf263c">problem</a></li>
+<li><a href="#orgb962c88">derivation</a></li>
+</ul>
+</li>
+<li><a href="#org06921c9">Eq109</a>
+<ul>
+<li><a href="#org7efac51">problem</a></li>
+<li><a href="#org86cf9a6">derivation</a></li>
+</ul>
+</li>
+<li><a href="#orgb31239a">Eq110</a>
+<ul>
+<li><a href="#org0237fbf">problem</a></li>
+<li><a href="#org2776bb5">derivation</a></li>
+</ul>
+</li>
+<li><a href="#orge4c24fe">Eq111</a>
+<ul>
+<li><a href="#orgee725cf">problem</a></li>
+<li><a href="#orga7e98ad">derivation</a></li>
+</ul>
+</li>
+<li><a href="#org053ca02">Eq112</a>
+<ul>
+<li><a href="#org7959a34">problem</a></li>
+<li><a href="#org82b7137">derivation</a></li>
+</ul>
+</li>
+<li><a href="#orgbaa1bea">Eq113</a>
+<ul>
+<li><a href="#orgac18b72">problem</a></li>
+<li><a href="#org6abcfec">derivation</a></li>
+</ul>
+</li>
+<li><a href="#org16d4480">Eq114</a>
+<ul>
+<li><a href="#org48f4a64">problem</a></li>
+<li><a href="#orgafb6db9">derivation</a></li>
+</ul>
+</li>
+<li><a href="#org35099e8">Eq115</a>
+<ul>
+<li><a href="#org5f83a3f">problem</a></li>
+<li><a href="#org55803e2">derivation</a></li>
+</ul>
+</li>
+<li><a href="#orge26160c">Eq116</a>
+<ul>
+<li><a href="#org0c1e3b0">problem</a></li>
+<li><a href="#org5c4c144">derivation</a></li>
+</ul>
+</li>
+<li><a href="#orgf56e05e">Eq117</a>
+<ul>
+<li><a href="#org796cf42">problem</a></li>
+<li><a href="#orgcbb55c5">derivation</a></li>
+</ul>
+</li>
+<li><a href="#org5e9814f">Eq118</a>
+<ul>
+<li><a href="#orgafffda4">problem</a></li>
+<li><a href="#orgfb393f7">derivation</a></li>
+</ul>
+</li>
+<li><a href="#orgbf5743c">Eq119</a>
+<ul>
+<li><a href="#orgb064833">problem</a></li>
+<li><a href="#orgf632872">derivation</a></li>
+<li><a href="#org2df4c7a">reference</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd27c979" class="outline-2">
-<h2 id="orgd27c979">Sec2.5 Derivatives of Traces</h2>
-<div class="outline-text-2" id="text-orgd27c979">
+<div id="outline-container-org6506512" class="outline-2">
+<h2 id="org6506512">Sec2.5 Derivatives of Traces</h2>
+<div class="outline-text-2" id="text-org6506512">
 <p>
 I'll use taylor expansion identity for the most of the derivations. e.g., <a href="..//ch00-cheat/01-think.html#MissingReference">link</a> 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf42b16c" class="outline-2">
-<h2 id="orgf42b16c">Eq99</h2>
-<div class="outline-text-2" id="text-orgf42b16c">
+<div id="outline-container-org6676236" class="outline-2">
+<h2 id="org6676236">Eq99</h2>
+<div class="outline-text-2" id="text-org6676236">
 </div>
-<div id="outline-container-org1cb8242" class="outline-3">
-<h3 id="org1cb8242">problem</h3>
-<div class="outline-text-3" id="text-org1cb8242">
+<div id="outline-container-org201a225" class="outline-3">
+<h3 id="org201a225">problem</h3>
+<div class="outline-text-3" id="text-org201a225">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -348,9 +433,9 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-org0032e78" class="outline-3">
-<h3 id="org0032e78">derivation</h3>
-<div class="outline-text-3" id="text-org0032e78">
+<div id="outline-container-org3b71977" class="outline-3">
+<h3 id="org3b71977">derivation</h3>
+<div class="outline-text-3" id="text-org3b71977">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -367,13 +452,13 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-orgf54ad3f" class="outline-2">
-<h2 id="orgf54ad3f">Eq100</h2>
-<div class="outline-text-2" id="text-orgf54ad3f">
+<div id="outline-container-org6bbd695" class="outline-2">
+<h2 id="org6bbd695">Eq100</h2>
+<div class="outline-text-2" id="text-org6bbd695">
 </div>
-<div id="outline-container-org13ca065" class="outline-3">
-<h3 id="org13ca065">problem</h3>
-<div class="outline-text-3" id="text-org13ca065">
+<div id="outline-container-org93d7885" class="outline-3">
+<h3 id="org93d7885">problem</h3>
+<div class="outline-text-3" id="text-org93d7885">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -385,9 +470,9 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-org84dd9b7" class="outline-3">
-<h3 id="org84dd9b7">derivation</h3>
-<div class="outline-text-3" id="text-org84dd9b7">
+<div id="outline-container-orgca2fe90" class="outline-3">
+<h3 id="orgca2fe90">derivation</h3>
+<div class="outline-text-3" id="text-orgca2fe90">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -404,13 +489,13 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-orgf112f3e" class="outline-2">
-<h2 id="orgf112f3e">Eq101</h2>
-<div class="outline-text-2" id="text-orgf112f3e">
+<div id="outline-container-orgd613578" class="outline-2">
+<h2 id="orgd613578">Eq101</h2>
+<div class="outline-text-2" id="text-orgd613578">
 </div>
-<div id="outline-container-org4d62009" class="outline-3">
-<h3 id="org4d62009">problem</h3>
-<div class="outline-text-3" id="text-org4d62009">
+<div id="outline-container-orgbc95fe0" class="outline-3">
+<h3 id="orgbc95fe0">problem</h3>
+<div class="outline-text-3" id="text-orgbc95fe0">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -422,9 +507,9 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-org36c745f" class="outline-3">
-<h3 id="org36c745f">derivation</h3>
-<div class="outline-text-3" id="text-org36c745f">
+<div id="outline-container-orged1045a" class="outline-3">
+<h3 id="orged1045a">derivation</h3>
+<div class="outline-text-3" id="text-orged1045a">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -442,13 +527,13 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-orge6dbff5" class="outline-2">
-<h2 id="orge6dbff5">Eq102</h2>
-<div class="outline-text-2" id="text-orge6dbff5">
+<div id="outline-container-orgf4619f3" class="outline-2">
+<h2 id="orgf4619f3">Eq102</h2>
+<div class="outline-text-2" id="text-orgf4619f3">
 </div>
-<div id="outline-container-orgadac173" class="outline-3">
-<h3 id="orgadac173">problem</h3>
-<div class="outline-text-3" id="text-orgadac173">
+<div id="outline-container-org5e29f6c" class="outline-3">
+<h3 id="org5e29f6c">problem</h3>
+<div class="outline-text-3" id="text-org5e29f6c">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -460,9 +545,9 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-orgfa10fb5" class="outline-3">
-<h3 id="orgfa10fb5">derivation</h3>
-<div class="outline-text-3" id="text-orgfa10fb5">
+<div id="outline-container-orgac0a9fc" class="outline-3">
+<h3 id="orgac0a9fc">derivation</h3>
+<div class="outline-text-3" id="text-orgac0a9fc">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -479,13 +564,13 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-orgd12ffa8" class="outline-2">
-<h2 id="orgd12ffa8">Eq103</h2>
-<div class="outline-text-2" id="text-orgd12ffa8">
+<div id="outline-container-org8e897ac" class="outline-2">
+<h2 id="org8e897ac">Eq103</h2>
+<div class="outline-text-2" id="text-org8e897ac">
 </div>
-<div id="outline-container-orgd17cbed" class="outline-3">
-<h3 id="orgd17cbed">problem</h3>
-<div class="outline-text-3" id="text-orgd17cbed">
+<div id="outline-container-org15a88f5" class="outline-3">
+<h3 id="org15a88f5">problem</h3>
+<div class="outline-text-3" id="text-org15a88f5">
 \begin{equation}
 \begin{split}
         \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^T\mathbf{A})\big) = \mathbf{A}
@@ -493,9 +578,9 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 \end{equation}
 </div>
 </div>
-<div id="outline-container-org6753958" class="outline-3">
-<h3 id="org6753958">derivation</h3>
-<div class="outline-text-3" id="text-org6753958">
+<div id="outline-container-orgaa79191" class="outline-3">
+<h3 id="orgaa79191">derivation</h3>
+<div class="outline-text-3" id="text-orgaa79191">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -512,13 +597,13 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 
 
-<div id="outline-container-org7e7d807" class="outline-2">
-<h2 id="org7e7d807">Eq104</h2>
-<div class="outline-text-2" id="text-org7e7d807">
+<div id="outline-container-org1950e46" class="outline-2">
+<h2 id="org1950e46">Eq104</h2>
+<div class="outline-text-2" id="text-org1950e46">
 </div>
-<div id="outline-container-org8d20462" class="outline-3">
-<h3 id="org8d20462">problem</h3>
-<div class="outline-text-3" id="text-org8d20462">
+<div id="outline-container-org84f7644" class="outline-3">
+<h3 id="org84f7644">problem</h3>
+<div class="outline-text-3" id="text-org84f7644">
 \begin{equation}
 \begin{split}
         \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{A}\mathbf{X}^T)\big) = \mathbf{A}
@@ -526,9 +611,9 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 \end{equation}
 </div>
 </div>
-<div id="outline-container-orgd5ee7b9" class="outline-3">
-<h3 id="orgd5ee7b9">derivation</h3>
-<div class="outline-text-3" id="text-orgd5ee7b9">
+<div id="outline-container-org19c17dc" class="outline-3">
+<h3 id="org19c17dc">derivation</h3>
+<div class="outline-text-3" id="text-org19c17dc">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -545,13 +630,13 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 
-<div id="outline-container-org277a000" class="outline-2">
-<h2 id="org277a000">Eq105</h2>
-<div class="outline-text-2" id="text-org277a000">
+<div id="outline-container-org1e2c272" class="outline-2">
+<h2 id="org1e2c272">Eq105</h2>
+<div class="outline-text-2" id="text-org1e2c272">
 </div>
-<div id="outline-container-orga383ab5" class="outline-3">
-<h3 id="orga383ab5">problem</h3>
-<div class="outline-text-3" id="text-orga383ab5">
+<div id="outline-container-org4cd796f" class="outline-3">
+<h3 id="org4cd796f">problem</h3>
+<div class="outline-text-3" id="text-org4cd796f">
 \begin{equation}
 \begin{split}
         \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{A} \otimes \mathbf{X})\big) = \text{Tr}(\mathbf{A})\mathbf{I}
@@ -559,9 +644,9 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 \end{equation}
 </div>
 </div>
-<div id="outline-container-org4e9bce0" class="outline-3">
-<h3 id="org4e9bce0">derivation</h3>
-<div class="outline-text-3" id="text-org4e9bce0">
+<div id="outline-container-org07e413d" class="outline-3">
+<h3 id="org07e413d">derivation</h3>
+<div class="outline-text-3" id="text-org07e413d">
 <div class="LaTeX">
 \begin{equation}
 \begin{split}
@@ -579,11 +664,542 @@ I'll use taylor expansion identity for the most of the derivations. e.g., <a hre
 </div>
 </div>
 </div>
+
+<div id="outline-container-org52e8afb" class="outline-2">
+<h2 id="org52e8afb">Eq106</h2>
+<div class="outline-text-2" id="text-org52e8afb">
+</div>
+<div id="outline-container-orgdeb1d5f" class="outline-3">
+<h3 id="orgdeb1d5f">problem</h3>
+<div class="outline-text-3" id="text-orgdeb1d5f">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^2 \big) = 2 \mathbf{X}^T
+\end{split}
+\end{equation}
+</div>
+</div>
+<div id="outline-container-orgb443fba" class="outline-3">
+<h3 id="orgb443fba">derivation</h3>
+<div class="outline-text-3" id="text-orgb443fba">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+  \text{Tr}((\mathbf{X}-\mathbf{H})^2) - \text{Tr}(\mathbf{X}^2)
+  &= \text{Tr}(\mathbf{X}^T\mathbf{X} + \mathbf{X}^T \mathbf{H} + \mathbf{H}^T \mathbf{X} + \mathbf{H}^T \mathbf{H}) - \text{Tr}(\mathbf{X}^T \mathbf{X}) \\
+  &= \text{Tr}(\mathbf{X}^T \mathbf{H}) + \text{Tr}(\mathbf{H}^T \mathbf{X}) + \text{Tr}(\mathbf{H}^T \mathbf{H}) \\
+  &= 2 \cdot \left \langle \mathbf{X}^T, \mathbf{H}  \right \rangle \\
+  &= \left \langle 2 \mathbf{X}^T, \mathbf{H}  \right \rangle  
+\end{split}
+\end{equation}
+
+</div>
+
+<p>
+The \(\text{Tr}(\mathbf{H}^T\mathbf{H})\) is ignored.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgd3da001" class="outline-2">
+<h2 id="orgd3da001">Eq107</h2>
+<div class="outline-text-2" id="text-orgd3da001">
+</div>
+<div id="outline-container-org2214d7d" class="outline-3">
+<h3 id="org2214d7d">problem</h3>
+<div class="outline-text-3" id="text-org2214d7d">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^2 \mathbf{B}) \big) = (\mathbf{X}\mathbf{B}+\mathbf{B}\mathbf{X})^T
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge4486db" class="outline-3">
+<h3 id="orge4486db">derivation</h3>
+<div class="outline-text-3" id="text-orge4486db">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+  \text{Tr}((\mathbf{X}+\mathbf{H})^2 \mathbf{B}) - \text{Tr}(\mathbf{X}^2 \mathbf{B})
+  &= \text{Tr}(\mathbf{X}\mathbf{X}\mathbf{B} +
+     \mathbf{X}\mathbf{H}\mathbf{B} +
+     \mathbf{H}\mathbf{X}\mathbf{B} +
+     \mathbf{H}\mathbf{H}\mathbf{B}) -
+     \text{Tr}(\mathbf{X}\mathbf{X}\mathbf{B}) \\
+  &= \text{Tr}(\mathbf{X}\mathbf{H}\mathbf{B}) +
+     \text{Tr}(\mathbf{H}\mathbf{X}\mathbf{B}) +
+     \text{Tr}(\mathbf{H}\mathbf{H}\mathbf{B}) \\
+  &= \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{H}) +
+     \text{Tr}(\mathbf{H}\mathbf{X}\mathbf{B})\\
+  &= \text{Tr}(((\mathbf{B}\mathbf{X})^T)^T\mathbf{H}) +
+     \text{Tr}(((\mathbf{X}\mathbf{B})^T)^T\mathbf{H})\\  
+  &= \left \langle (\mathbf{B}\mathbf{X})^T, \mathbf{H} \right \rangle +
+     \left \langle (\mathbf{X}\mathbf{B})^T, \mathbf{H} \right \rangle \\
+  &= \left \langle (\mathbf{X}\mathbf{B})^T+(\mathbf{B}\mathbf{X})^T, \mathbf{H} \right \rangle \\
+  &= \left \langle (\mathbf{X}\mathbf{B}+\mathbf{B}\mathbf{X})^T, \mathbf{H} \right \rangle \\     
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org20feafc" class="outline-2">
+<h2 id="org20feafc">Eq108</h2>
+<div class="outline-text-2" id="text-org20feafc">
+</div>
+<div id="outline-container-orgbaf263c" class="outline-3">
+<h3 id="orgbaf263c">problem</h3>
+<div class="outline-text-3" id="text-orgbaf263c">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^T \mathbf{B} \mathbf{X}) \big) = \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb962c88" class="outline-3">
+<h3 id="orgb962c88">derivation</h3>
+<div class="outline-text-3" id="text-orgb962c88">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+  & \text{Tr}((\mathbf{X}+\mathbf{H})^T \mathbf{B} (\mathbf{X}+\mathbf{H})) - \text{Tr}(\mathbf{X}^T \mathbf{B} \mathbf{X}) \\
+  &= \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}) +
+  \text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{H}) +
+  \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{H}) \\
+  &= \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}) +
+  \text{Tr}((\mathbf{B}^T\mathbf{X})^T\mathbf{H}) \\
+  &= \left \langle \mathbf{B}\mathbf{X}, \mathbf{H}  \right \rangle +
+  \left \langle \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle \\
+  &= \left \langle \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org06921c9" class="outline-2">
+<h2 id="org06921c9">Eq109</h2>
+<div class="outline-text-2" id="text-org06921c9">
+</div>
+<div id="outline-container-org7efac51" class="outline-3">
+<h3 id="org7efac51">problem</h3>
+<div class="outline-text-3" id="text-org7efac51">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{B} \mathbf{X} \mathbf{X}^T) \big) = \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org86cf9a6" class="outline-3">
+<h3 id="org86cf9a6">derivation</h3>
+<div class="outline-text-3" id="text-org86cf9a6">
+<p>
+Just simply rotate \(\mathbf{X}^T\) to front. Or you could work similar proof as
+in Eq108.
+</p>
+
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+  & \text{Tr}(\mathbf{B} (\mathbf{X}+\mathbf{H}) (\mathbf{X}+\mathbf{H})^T) - \text{Tr}(\mathbf{B} \mathbf{X} \mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{H}^T) +
+  \text{Tr}(\mathbf{B}\mathbf{H}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{B}\mathbf{H}\mathbf{H}^T) -
+  \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{H}^T) + \text{Tr}((\mathbf{B}^T\mathbf{X})^T\mathbf{H})\\
+  &= \left \langle \mathbf{B}\mathbf{X}, \mathbf{H}  \right \rangle + 
+    \left \langle \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle \\
+  &= \left \langle \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb31239a" class="outline-2">
+<h2 id="orgb31239a">Eq110</h2>
+<div class="outline-text-2" id="text-orgb31239a">
+</div>
+<div id="outline-container-org0237fbf" class="outline-3">
+<h3 id="org0237fbf">problem</h3>
+<div class="outline-text-3" id="text-org0237fbf">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X} \mathbf{X}^T \mathbf{B}) \big) = \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2776bb5" class="outline-3">
+<h3 id="org2776bb5">derivation</h3>
+<div class="outline-text-3" id="text-org2776bb5">
+<p>
+Just simply rotate \(\mathbf{B}\) to front and use Eq109. Or doing similar proof
+like Eq109.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge4c24fe" class="outline-2">
+<h2 id="orge4c24fe">Eq111</h2>
+<div class="outline-text-2" id="text-orge4c24fe">
+</div>
+<div id="outline-container-orgee725cf" class="outline-3">
+<h3 id="orgee725cf">problem</h3>
+<div class="outline-text-3" id="text-orgee725cf">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X} \mathbf{B} \mathbf{X}^T) \big) = \mathbf{X}\mathbf{B}^T + \mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orga7e98ad" class="outline-3">
+<h3 id="orga7e98ad">derivation</h3>
+<div class="outline-text-3" id="text-orga7e98ad">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+  & \text{Tr}((\mathbf{X}+\mathbf{H}) \mathbf{B} (\mathbf{X}+\mathbf{H})^T) - \text{Tr}(\mathbf{X} \mathbf{B} \mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{X}\mathbf{B}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{H}\mathbf{B}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{X}\mathbf{B}\mathbf{H}^T) +
+  \text{Tr}(\mathbf{H}\mathbf{B}\mathbf{H}^T) -
+  \text{Tr}(\mathbf{X} \mathbf{B} \mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{H}(\mathbf{X}\mathbf{B}^T)^T) +
+  \text{Tr}(\mathbf{X}\mathbf{B}\mathbf{H}^T) \\
+  &= \left \langle \mathbf{X}\mathbf{B}^T, \mathbf{H} \right \rangle +
+  \left \langle \mathbf{X}\mathbf{B}, \mathbf{H} \right \rangle \\
+  &= \left \langle \mathbf{X}\mathbf{B} + \mathbf{X}\mathbf{B}^T, \mathbf{H} \right \rangle
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org053ca02" class="outline-2">
+<h2 id="org053ca02">Eq112</h2>
+<div class="outline-text-2" id="text-org053ca02">
+</div>
+<div id="outline-container-org7959a34" class="outline-3">
+<h3 id="org7959a34">problem</h3>
+<div class="outline-text-3" id="text-org7959a34">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{B} \mathbf{X}^T \mathbf{X}) \big) = \mathbf{X}\mathbf{B}^T + \mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-org82b7137" class="outline-3">
+<h3 id="org82b7137">derivation</h3>
+<div class="outline-text-3" id="text-org82b7137">
+<p>
+trace cyclic property, see Eq.111
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbaa1bea" class="outline-2">
+<h2 id="orgbaa1bea">Eq113</h2>
+<div class="outline-text-2" id="text-orgbaa1bea">
+</div>
+<div id="outline-container-orgac18b72" class="outline-3">
+<h3 id="orgac18b72">problem</h3>
+<div class="outline-text-3" id="text-orgac18b72">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}( \mathbf{X}^T \mathbf{X} \mathbf{B}) \big) = \mathbf{X}\mathbf{B}^T + \mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-org6abcfec" class="outline-3">
+<h3 id="org6abcfec">derivation</h3>
+<div class="outline-text-3" id="text-org6abcfec">
+<p>
+trace cyclic property, see Eq.111
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org16d4480" class="outline-2">
+<h2 id="org16d4480">Eq114</h2>
+<div class="outline-text-2" id="text-org16d4480">
+</div>
+<div id="outline-container-org48f4a64" class="outline-3">
+<h3 id="org48f4a64">problem</h3>
+<div class="outline-text-3" id="text-org48f4a64">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}( \mathbf{A} \mathbf{X} \mathbf{B} \mathbf{X}) \big) = \mathbf{A}^T\mathbf{X}^T\mathbf{B}^T + \mathbf{B}^T\mathbf{X}^T\mathbf{A}^T
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgafb6db9" class="outline-3">
+<h3 id="orgafb6db9">derivation</h3>
+<div class="outline-text-3" id="text-orgafb6db9">
+<div class="LaTeX">
+\begin{equation}
+	\begin{split}
+		& \text{Tr}( \mathbf{A} (\mathbf{X}+\mathbf{H}) \mathbf{B} (\mathbf{X}+\mathbf{H})) -
+		\text{Tr}( \mathbf{A} \mathbf{X} \mathbf{B} \mathbf{X}) \\
+		&= \text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{H}) +
+		\text{Tr}(\mathbf{A}\mathbf{H}\mathbf{B}\mathbf{X}) +
+		\text{Tr}(\mathbf{A}\mathbf{H}\mathbf{B}\mathbf{H})\\
+		&= \text{Tr}((\mathbf{B}^T\mathbf{X}^T\mathbf{A}^T)^T\mathbf{H}) +
+		\text{Tr}((\mathbf{A}^T\mathbf{X}^T\mathbf{B}^T)^T\mathbf{H}) +\\
+		&= \left \langle \mathbf{B}^T\mathbf{X}^T\mathbf{A}^T+\mathbf{A}^T\mathbf{X}^T\mathbf{B}^T, \mathbf{H}  \right \rangle
+	\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org35099e8" class="outline-2">
+<h2 id="org35099e8">Eq115</h2>
+<div class="outline-text-2" id="text-org35099e8">
+</div>
+<div id="outline-container-org5f83a3f" class="outline-3">
+<h3 id="org5f83a3f">problem</h3>
+<div class="outline-text-3" id="text-org5f83a3f">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}\mathbf{X}^T)\big) = 2 \mathbf{X}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-org55803e2" class="outline-3">
+<h3 id="org55803e2">derivation</h3>
+<div class="outline-text-3" id="text-org55803e2">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+  &\text{Tr}((\mathbf{X}+\mathbf{H})(\mathbf{X}+\mathbf{H})^T) - \text{Tr}(\mathbf{X}\mathbf{X}^T) \\
+  &=\text{Tr}(\mathbf{X}\mathbf{H}^T)+\text{Tr}(\mathbf{H}\mathbf{X}^T)\\
+  &=\left \langle 2\mathbf{X}, \mathbf{H}  \right \rangle 
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge26160c" class="outline-2">
+<h2 id="orge26160c">Eq116</h2>
+<div class="outline-text-2" id="text-orge26160c">
+</div>
+<div id="outline-container-org0c1e3b0" class="outline-3">
+<h3 id="org0c1e3b0">problem</h3>
+<div class="outline-text-3" id="text-org0c1e3b0">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{B}^T\mathbf{X}^T\mathbf{C}\mathbf{X}\mathbf{B})\big) \\
+&= \mathbf{C}^T\mathbf{X}\mathbf{B}\mathbf{B}^T + \mathbf{C}\mathbf{X}\mathbf{B}\mathbf{B}^T
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5c4c144" class="outline-3">
+<h3 id="org5c4c144">derivation</h3>
+<div class="outline-text-3" id="text-org5c4c144">
+<div class="LaTeX">
+\begin{equation}
+	\begin{split}
+		&\text{Tr}(\mathbf{B}^T(\mathbf{X}+\mathbf{H})^T\mathbf{C}(\mathbf{X}+\mathbf{H})\mathbf{B}) -
+		\text{Tr}(\mathbf{B}^T\mathbf{X}^T\mathbf{C}\mathbf{X}\mathbf{B})\\
+		&=  \text{Tr}(\mathbf{B}^T \mathbf{H}^T \mathbf{C} \mathbf{X} \mathbf{B}) +
+		\text{Tr}(\mathbf{B}^T \mathbf{X}^T \mathbf{C} \mathbf{H} \mathbf{B})\\
+		&= \text{Tr}(\mathbf{C} \mathbf{X} \mathbf{B} \mathbf{B}^T \mathbf{H}^T ) +
+		\text{Tr}((\mathbf{C}^T \mathbf{X} \mathbf{B} \mathbf{B}^T)^T \mathbf{H})\\
+		&= \left \langle
+		\mathbf{C} \mathbf{X} \mathbf{B} \mathbf{B}^T +
+		\mathbf{C}^T \mathbf{X} \mathbf{B} \mathbf{B}^T, \mathbf{H}
+		\right \rangle
+	\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf56e05e" class="outline-2">
+<h2 id="orgf56e05e">Eq117</h2>
+<div class="outline-text-2" id="text-orgf56e05e">
+</div>
+<div id="outline-container-org796cf42" class="outline-3">
+<h3 id="org796cf42">problem</h3>
+<div class="outline-text-3" id="text-org796cf42">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{X}\mathbf{C})\big) \\
+&= \mathbf{B}\mathbf{X}\mathbf{C} + \mathbf{B}^T\mathbf{X}\mathbf{C}^T
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgcbb55c5" class="outline-3">
+<h3 id="orgcbb55c5">derivation</h3>
+<div class="outline-text-3" id="text-orgcbb55c5">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+  & \text{Tr}((\mathbf{X}+\mathbf{H})^T\mathbf{B}(\mathbf{X}+\mathbf{H})\mathbf{C}) - \text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{X}\mathbf{C}) \\
+  &= \text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{H}\mathbf{C}) +
+  \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}\mathbf{C}) \\
+  &= \text{Tr}((\mathbf{B}^T\mathbf{X}\mathbf{C}^T)^T\mathbf{H})+
+  \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}\mathbf{C}) \\
+  &= \left \langle \mathbf{B}^T\mathbf{X}\mathbf{C}^T + \mathbf{B}\mathbf{X}\mathbf{C}, \mathbf{H}  \right \rangle
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5e9814f" class="outline-2">
+<h2 id="org5e9814f">Eq118</h2>
+<div class="outline-text-2" id="text-org5e9814f">
+</div>
+<div id="outline-container-orgafffda4" class="outline-3">
+<h3 id="orgafffda4">problem</h3>
+<div class="outline-text-3" id="text-orgafffda4">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{X}^T\mathbf{C})\big) \\
+&= \mathbf{A}^T\mathbf{C}^T\mathbf{X}\mathbf{B}^T + \mathbf{C}\mathbf{A}\mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb393f7" class="outline-3">
+<h3 id="orgfb393f7">derivation</h3>
+<div class="outline-text-3" id="text-orgfb393f7">
+<div class="LaTeX">
+\begin{equation}
+	\begin{split}
+		& \text{Tr}(\mathbf{A}(\mathbf{X}+\mathbf{H})\mathbf{B}(\mathbf{X}+\mathbf{H})^T\mathbf{C}) -
+		\text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{X}^T\mathbf{C}) \\
+		&= \text{Tr}(\mathbf{A}\mathbf{H}\mathbf{B}\mathbf{X}^T\mathbf{C}) +
+		\text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{H}^T\mathbf{C}) \\
+		&= \text{Tr}(\mathbf{H}(\mathbf{A}^T\mathbf{C}^T\mathbf{X}\mathbf{B}^T)^T) +
+		\text{Tr}(\mathbf{C}\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{H}^T) \\
+		&= \left \langle
+		\mathbf{A}^T\mathbf{C}^T\mathbf{X}\mathbf{B}^T +
+		\mathbf{C}\mathbf{A}\mathbf{X}\mathbf{B}, \mathbf{H}
+		\right \rangle
+	\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf5743c" class="outline-2">
+<h2 id="orgbf5743c">Eq119</h2>
+<div class="outline-text-2" id="text-orgbf5743c">
+</div>
+<div id="outline-container-orgb064833" class="outline-3">
+<h3 id="orgb064833">problem</h3>
+<div class="outline-text-3" id="text-orgb064833">
+<div class="LaTeX">
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \text{Tr}\big( (\mathbf{A}\mathbf{X}\mathbf{B}+\mathbf{C})(\mathbf{A}\mathbf{X}\mathbf{B}+\mathbf{C})^T \big) \\
+&=2\mathbf{A}(\mathbf{A}\mathbf{X}\mathbf{B}+\mathbf{C})\mathbf{B}^T
+\end{split}
+\end{equation}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgf632872" class="outline-3">
+<h3 id="orgf632872">derivation</h3>
+</div>
+
+
+
+<div id="outline-container-org2df4c7a" class="outline-3">
+<h3 id="org2df4c7a">reference</h3>
+<div class="outline-text-3" id="text-org2df4c7a">
+<ul class="org-ul">
+<li>[SX] Derivative of AXB with respect to X (<a href="https://math.stackexchange.com/questions/3250317/derivative-of-axb-with-respect-to-x">link</a>)</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: Sun Nov 29 00:26:06 2020 Fri Nov 27 22:15:33 2020</p>
 <p class="author">Author: Wan-Duo Kurt Ma Wan-Duo Kurt Ma</p>
-<p class="date">Created: 2020-11-29 Sun 01:02</p>
+<p class="date">Created: 2020-12-02 Wed 22:39</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

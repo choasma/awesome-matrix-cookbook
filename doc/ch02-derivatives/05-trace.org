@@ -167,3 +167,331 @@ I'll use taylor expansion identity for the most of the derivations. e.g., [[file
 \end{split}
 \end{equation}
 #+END_LaTeX
+
+* Eq106
+** problem
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^2 \big) = 2 \mathbf{X}^T
+\end{split}
+\end{equation}
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \text{Tr}((\mathbf{X}-\mathbf{H})^2) - \text{Tr}(\mathbf{X}^2)
+  &= \text{Tr}(\mathbf{X}^T\mathbf{X} + \mathbf{X}^T \mathbf{H} + \mathbf{H}^T \mathbf{X} + \mathbf{H}^T \mathbf{H}) - \text{Tr}(\mathbf{X}^T \mathbf{X}) \\
+  &= \text{Tr}(\mathbf{X}^T \mathbf{H}) + \text{Tr}(\mathbf{H}^T \mathbf{X}) + \text{Tr}(\mathbf{H}^T \mathbf{H}) \\
+  &= 2 \cdot \left \langle \mathbf{X}^T, \mathbf{H}  \right \rangle \\
+  &= \left \langle 2 \mathbf{X}^T, \mathbf{H}  \right \rangle  
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+The $\text{Tr}(\mathbf{H}^T\mathbf{H})$ is ignored.
+
+
+* Eq107
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^2 \mathbf{B}) \big) = (\mathbf{X}\mathbf{B}+\mathbf{B}\mathbf{X})^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  \text{Tr}((\mathbf{X}+\mathbf{H})^2 \mathbf{B}) - \text{Tr}(\mathbf{X}^2 \mathbf{B})
+  &= \text{Tr}(\mathbf{X}\mathbf{X}\mathbf{B} +
+     \mathbf{X}\mathbf{H}\mathbf{B} +
+     \mathbf{H}\mathbf{X}\mathbf{B} +
+     \mathbf{H}\mathbf{H}\mathbf{B}) -
+     \text{Tr}(\mathbf{X}\mathbf{X}\mathbf{B}) \\
+  &= \text{Tr}(\mathbf{X}\mathbf{H}\mathbf{B}) +
+     \text{Tr}(\mathbf{H}\mathbf{X}\mathbf{B}) +
+     \text{Tr}(\mathbf{H}\mathbf{H}\mathbf{B}) \\
+  &= \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{H}) +
+     \text{Tr}(\mathbf{H}\mathbf{X}\mathbf{B})\\
+  &= \text{Tr}(((\mathbf{B}\mathbf{X})^T)^T\mathbf{H}) +
+     \text{Tr}(((\mathbf{X}\mathbf{B})^T)^T\mathbf{H})\\  
+  &= \left \langle (\mathbf{B}\mathbf{X})^T, \mathbf{H} \right \rangle +
+     \left \langle (\mathbf{X}\mathbf{B})^T, \mathbf{H} \right \rangle \\
+  &= \left \langle (\mathbf{X}\mathbf{B})^T+(\mathbf{B}\mathbf{X})^T, \mathbf{H} \right \rangle \\
+  &= \left \langle (\mathbf{X}\mathbf{B}+\mathbf{B}\mathbf{X})^T, \mathbf{H} \right \rangle \\     
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+
+* Eq108
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^T \mathbf{B} \mathbf{X}) \big) = \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}
+\end{split}
+\end{equation}
+#+END_LaTex
+
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  & \text{Tr}((\mathbf{X}+\mathbf{H})^T \mathbf{B} (\mathbf{X}+\mathbf{H})) - \text{Tr}(\mathbf{X}^T \mathbf{B} \mathbf{X}) \\
+  &= \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}) +
+  \text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{H}) +
+  \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{H}) \\
+  &= \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}) +
+  \text{Tr}((\mathbf{B}^T\mathbf{X})^T\mathbf{H}) \\
+  &= \left \langle \mathbf{B}\mathbf{X}, \mathbf{H}  \right \rangle +
+  \left \langle \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle \\
+  &= \left \langle \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq109
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{B} \mathbf{X} \mathbf{X}^T) \big) = \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}
+\end{split}
+\end{equation}
+#+END_LaTex
+
+** derivation
+Just simply rotate $\mathbf{X}^T$ to front. Or you could work similar proof as
+in Eq108.
+
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  & \text{Tr}(\mathbf{B} (\mathbf{X}+\mathbf{H}) (\mathbf{X}+\mathbf{H})^T) - \text{Tr}(\mathbf{B} \mathbf{X} \mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{H}^T) +
+  \text{Tr}(\mathbf{B}\mathbf{H}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{B}\mathbf{H}\mathbf{H}^T) -
+  \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{B}\mathbf{X}\mathbf{H}^T) + \text{Tr}((\mathbf{B}^T\mathbf{X})^T\mathbf{H})\\
+  &= \left \langle \mathbf{B}\mathbf{X}, \mathbf{H}  \right \rangle + 
+    \left \langle \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle \\
+  &= \left \langle \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}, \mathbf{H}  \right \rangle
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq110
+
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X} \mathbf{X}^T \mathbf{B}) \big) = \mathbf{B}\mathbf{X} + \mathbf{B}^T\mathbf{X}
+\end{split}
+\end{equation}
+#+END_LaTex
+
+** derivation
+Just simply rotate $\mathbf{B}$ to front and use Eq109. Or doing similar proof
+like Eq109.
+
+* Eq111
+
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X} \mathbf{B} \mathbf{X}^T) \big) = \mathbf{X}\mathbf{B}^T + \mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+#+END_LaTex
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  & \text{Tr}((\mathbf{X}+\mathbf{H}) \mathbf{B} (\mathbf{X}+\mathbf{H})^T) - \text{Tr}(\mathbf{X} \mathbf{B} \mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{X}\mathbf{B}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{H}\mathbf{B}\mathbf{X}^T) +
+  \text{Tr}(\mathbf{X}\mathbf{B}\mathbf{H}^T) +
+  \text{Tr}(\mathbf{H}\mathbf{B}\mathbf{H}^T) -
+  \text{Tr}(\mathbf{X} \mathbf{B} \mathbf{X}^T) \\
+  &= \text{Tr}(\mathbf{H}(\mathbf{X}\mathbf{B}^T)^T) +
+  \text{Tr}(\mathbf{X}\mathbf{B}\mathbf{H}^T) \\
+  &= \left \langle \mathbf{X}\mathbf{B}^T, \mathbf{H} \right \rangle +
+  \left \langle \mathbf{X}\mathbf{B}, \mathbf{H} \right \rangle \\
+  &= \left \langle \mathbf{X}\mathbf{B} + \mathbf{X}\mathbf{B}^T, \mathbf{H} \right \rangle
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq112
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{B} \mathbf{X}^T \mathbf{X}) \big) = \mathbf{X}\mathbf{B}^T + \mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+#+END_LaTex
+** derivation
+trace cyclic property, see Eq.111
+
+* Eq113
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}( \mathbf{X}^T \mathbf{X} \mathbf{B}) \big) = \mathbf{X}\mathbf{B}^T + \mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+#+END_LaTex
+** derivation
+trace cyclic property, see Eq.111
+
+* Eq114
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+        \frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}( \mathbf{A} \mathbf{X} \mathbf{B} \mathbf{X}) \big) = \mathbf{A}^T\mathbf{X}^T\mathbf{B}^T + \mathbf{B}^T\mathbf{X}^T\mathbf{A}^T
+\end{split}
+\end{equation}
+#+END_LaTex
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+	\begin{split}
+		& \text{Tr}( \mathbf{A} (\mathbf{X}+\mathbf{H}) \mathbf{B} (\mathbf{X}+\mathbf{H})) -
+		\text{Tr}( \mathbf{A} \mathbf{X} \mathbf{B} \mathbf{X}) \\
+		&= \text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{H}) +
+		\text{Tr}(\mathbf{A}\mathbf{H}\mathbf{B}\mathbf{X}) +
+		\text{Tr}(\mathbf{A}\mathbf{H}\mathbf{B}\mathbf{H})\\
+		&= \text{Tr}((\mathbf{B}^T\mathbf{X}^T\mathbf{A}^T)^T\mathbf{H}) +
+		\text{Tr}((\mathbf{A}^T\mathbf{X}^T\mathbf{B}^T)^T\mathbf{H}) +\\
+		&= \left \langle \mathbf{B}^T\mathbf{X}^T\mathbf{A}^T+\mathbf{A}^T\mathbf{X}^T\mathbf{B}^T, \mathbf{H}  \right \rangle
+	\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq115
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}\mathbf{X}^T)\big) = 2 \mathbf{X}
+\end{split}
+\end{equation}
+#+END_LaTeX
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  &\text{Tr}((\mathbf{X}+\mathbf{H})(\mathbf{X}+\mathbf{H})^T) - \text{Tr}(\mathbf{X}\mathbf{X}^T) \\
+  &=\text{Tr}(\mathbf{X}\mathbf{H}^T)+\text{Tr}(\mathbf{H}\mathbf{X}^T)\\
+  &=\left \langle 2\mathbf{X}, \mathbf{H}  \right \rangle 
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq116
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{B}^T\mathbf{X}^T\mathbf{C}\mathbf{X}\mathbf{B})\big) \\
+&= \mathbf{C}^T\mathbf{X}\mathbf{B}\mathbf{B}^T + \mathbf{C}\mathbf{X}\mathbf{B}\mathbf{B}^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+	\begin{split}
+		&\text{Tr}(\mathbf{B}^T(\mathbf{X}+\mathbf{H})^T\mathbf{C}(\mathbf{X}+\mathbf{H})\mathbf{B}) -
+		\text{Tr}(\mathbf{B}^T\mathbf{X}^T\mathbf{C}\mathbf{X}\mathbf{B})\\
+		&=  \text{Tr}(\mathbf{B}^T \mathbf{H}^T \mathbf{C} \mathbf{X} \mathbf{B}) +
+		\text{Tr}(\mathbf{B}^T \mathbf{X}^T \mathbf{C} \mathbf{H} \mathbf{B})\\
+		&= \text{Tr}(\mathbf{C} \mathbf{X} \mathbf{B} \mathbf{B}^T \mathbf{H}^T ) +
+		\text{Tr}((\mathbf{C}^T \mathbf{X} \mathbf{B} \mathbf{B}^T)^T \mathbf{H})\\
+		&= \left \langle
+		\mathbf{C} \mathbf{X} \mathbf{B} \mathbf{B}^T +
+		\mathbf{C}^T \mathbf{X} \mathbf{B} \mathbf{B}^T, \mathbf{H}
+		\right \rangle
+	\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq117
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{X}\mathbf{C})\big) \\
+&= \mathbf{B}\mathbf{X}\mathbf{C} + \mathbf{B}^T\mathbf{X}\mathbf{C}^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+  & \text{Tr}((\mathbf{X}+\mathbf{H})^T\mathbf{B}(\mathbf{X}+\mathbf{H})\mathbf{C}) - \text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{X}\mathbf{C}) \\
+  &= \text{Tr}(\mathbf{X}^T\mathbf{B}\mathbf{H}\mathbf{C}) +
+  \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}\mathbf{C}) \\
+  &= \text{Tr}((\mathbf{B}^T\mathbf{X}\mathbf{C}^T)^T\mathbf{H})+
+  \text{Tr}(\mathbf{H}^T\mathbf{B}\mathbf{X}\mathbf{C}) \\
+  &= \left \langle \mathbf{B}^T\mathbf{X}\mathbf{C}^T + \mathbf{B}\mathbf{X}\mathbf{C}, \mathbf{H}  \right \rangle
+\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq118
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \big(\text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{X}^T\mathbf{C})\big) \\
+&= \mathbf{A}^T\mathbf{C}^T\mathbf{X}\mathbf{B}^T + \mathbf{C}\mathbf{A}\mathbf{X}\mathbf{B}
+\end{split}
+\end{equation}
+#+END_LaTeX
+** derivation
+#+BEGIN_LaTeX latex
+\begin{equation}
+	\begin{split}
+		& \text{Tr}(\mathbf{A}(\mathbf{X}+\mathbf{H})\mathbf{B}(\mathbf{X}+\mathbf{H})^T\mathbf{C}) -
+		\text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{X}^T\mathbf{C}) \\
+		&= \text{Tr}(\mathbf{A}\mathbf{H}\mathbf{B}\mathbf{X}^T\mathbf{C}) +
+		\text{Tr}(\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{H}^T\mathbf{C}) \\
+		&= \text{Tr}(\mathbf{H}(\mathbf{A}^T\mathbf{C}^T\mathbf{X}\mathbf{B}^T)^T) +
+		\text{Tr}(\mathbf{C}\mathbf{A}\mathbf{X}\mathbf{B}\mathbf{H}^T) \\
+		&= \left \langle
+		\mathbf{A}^T\mathbf{C}^T\mathbf{X}\mathbf{B}^T +
+		\mathbf{C}\mathbf{A}\mathbf{X}\mathbf{B}, \mathbf{H}
+		\right \rangle
+	\end{split}
+\end{equation}
+#+END_LaTeX
+
+* Eq119
+** problem
+#+BEGIN_LaTeX latex
+\begin{equation}
+\begin{split}
+&\frac{\partial }{\partial \mathbf{X}} \text{Tr}\big( (\mathbf{A}\mathbf{X}\mathbf{B}+\mathbf{C})(\mathbf{A}\mathbf{X}\mathbf{B}+\mathbf{C})^T \big) \\
+&=2\mathbf{A}(\mathbf{A}\mathbf{X}\mathbf{B}+\mathbf{C})\mathbf{B}^T
+\end{split}
+\end{equation}
+#+END_LaTeX
+** derivation
+
+
+
+** reference
+- [SX] Derivative of AXB with respect to X ([[https://math.stackexchange.com/questions/3250317/derivative-of-axb-with-respect-to-x][link]])
